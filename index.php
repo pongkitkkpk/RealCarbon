@@ -48,7 +48,7 @@ session_start();
         <div class="col-xl-8">
           <h1>KnightOne - Create Bootstrap Website Template</h1>
           <h2>We are team of designers making websites with Bootstrap</h2>
-          <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox play-btn mb-4"></a>
+          <a href="https://google.com" class="glightbox play-btn mb-4"></a>
         </div>
       </div>
     </div>
