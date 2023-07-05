@@ -18,7 +18,7 @@
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Pridi', serif;
   color: #444444;
 }
 
@@ -38,7 +38,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Pridi', serif;
 }
 
 /*--------------------------------------------------------------
@@ -165,7 +165,7 @@ h6 {
 }
 
 .get-started-btn:hover {
-  background: #383838;
+  background: #cdcf9f;
   color: #372e1e;
 }
 
@@ -676,6 +676,14 @@ section {
   box-shadow: 0px 5px 90px 0px rgba(110, 123, 131, 0.1);
   border-radius: 18px;
   border-bottom: 5px solid #fff;
+}
+
+.services .color1 {
+  background-color: #678566;
+}
+
+.services .color2 {
+  background-color: #cdcf9f;
 }
 
 .services .icon-box .icon {
@@ -1530,31 +1538,3 @@ section {
 #footer .credits a:hover {
   color: #009961;
 }
-
-
-/*--------------------------------------------------------------
-# table
---------------------------------------------------------------*/
-
-.table tbody td.status span {
-  position: relative;
-  border-radius: 30px;
-  padding: 4px 10px 4px 25px; }
-  .table tbody td.status span:after {
-    position: absolute;
-    top: 9px;
-    left: 10px;
-    width: 10px;
-    height: 10px;
-    content: '';
-    border-radius: 50%; }
-.table tbody td.status .active {
-  background: #cff6dd;
-  color: #1fa750; }
-  .table tbody td.status .active:after {
-    background: #23bd5a; }
-.table tbody td.status .waiting {
-  background: #fdf5dd;
-  color: #cfa00c; }
-  .table tbody td.status .waiting:after {
-    background: #f2be1d; }

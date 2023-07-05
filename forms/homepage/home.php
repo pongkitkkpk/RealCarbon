@@ -38,9 +38,10 @@ session_start();
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-xl-8">
-                    <h1>KnightOne - Create Bootstrap Website Template</h1>
-                    <h2>We are team of designers making websites with Bootstrap</h2>
-                    <a href="https://youtu.be/s6xKAnmFfN8" class="glightbox play-btn mb-4"></a>
+                    <h1>คาร์บอนเครดิตคืออะไร?</h1>
+                    <h1>ทำไมถึงต้องชดเชยคาร์บอนเครดิต?</h1>
+                    <h2>กดตรงนี้เรามีคำตอบสำหรับข้อสงสัยของคุณแล้ว!</h2>
+                    <a href="https://youtu.be/nd-s8HFDh3I" class="glightbox play-btn mb-4"></a>
                 </div>
             </div>
         </div>
@@ -50,7 +51,7 @@ session_start();
     <section id="about" class="about">
         <div class="container">
             <div class="section-title">
-                <h2>About Us</h2>
+                <h2>เกี่ยวกับเรา</h2>
                 <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
                     consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
                     in iste officiis commodi quidem hic quas.</p>
@@ -87,58 +88,61 @@ session_start();
     <section id="services" class="services">
         <div class="container">
             <div class="section-title">
-                <h2>Services</h2>
-                <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-                    consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
-                    in iste officiis commodi quidem hic quas.</p>
+                <h2>บริการของเรา</h2>
+                <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint -->
+                    <!-- consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit -->
+                    <!-- in iste officiis commodi quidem hic quas.</p> -->
             </div>
 
             <div class="row">
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-                    <div class="icon-box">
+                    <div class="icon-box color1">
                         <div class="icon"><i class="bx bxl-dribbble"></i></div>
-                        <h4><a href="">Buy CC</a></h4>
-                        <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+                        <h4><a href="">ตลาดคาร์บอนเครดิต</a></h4>
+                        <p>ศูนย์รวมบริษัทในเว็บไซต์ของเราสำหรับลูกค้าที่ต้องการทราบข้อมูลและรายละเอียดต่างๆ 
+                           เพื่อประกอบการตัดสินใจในการซื้อหรือการขายคาร์บอนเครดิตของท่าน</p>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-                    <div class="icon-box">
+                    <div class="icon-box color2">
                         <div class="icon"><i class="bx bx-file"></i></div>
-                        <h4><a href="">Sell CC</a></h4>
-                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+                        <h4><a href="">การซื้อคาร์บอนเครดิต</a></h4>
+                        <p>พื้นที่สำหรับลูกค้าที่สนใจและต้องการรายละเอียดสำหรับการซื้อคาร์บอนเครดิต</p>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
-                    <div class="icon-box">
+                    <div class="icon-box color1">
                         <div class="icon"><i class="bx bx-tachometer"></i></div>
-                        <h4><a href="">Check Status CC Company</a></h4>
-                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+                        <h4><a href="">การขายคาร์บอนเครดิต</a></h4>
+                        <p>พื้นที่สำหรับลูกค้าที่สนใจและต้องการรายละเอียดสำหรับการขายคาร์บอนเครดิต</p>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-                    <div class="icon-box">
+                    <div class="icon-box color2">
                         <div class="icon"><i class="bx bx-world"></i></div>
-                        <h4><a href="">Nemo Enim</a></h4>
-                        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+                        <h4><a href="">เช็คสถานะบริษัทผู้ค้า/ผู้ขาย</a></h4>
+                        <p>เช็คสถานะบริษัทผู้ค้าและผู้ขายที่ท่านต้องการทราบรายละเอียดได้เลยที่นี่!</p>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-                    <div class="icon-box">
+                    <div class="icon-box color1">
                         <div class="icon"><i class="bx bx-slideshow"></i></div>
-                        <h4><a href="">Dele cardo</a></h4>
-                        <p>Quis consequatur saepe eligendi voluptatem consequatur dolor consequuntur</p>
+                        <h4><a href="">คำนวนคาร์บอนเครดิต</a></h4>
+                        <p>การทดลองคำนวนจำนวนของคาร์บอนเครดิตที่ท่านต้องการทำการซื้อขายภายในเว็บไซต์ของเรา
+                           เพื่อประกอบการตัดสินใจในการซื้อหรือการขายคาร์บอนเครดิตของท่าน
+                        </p>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-                    <div class="icon-box">
+                    <div class="icon-box color2">
                         <div class="icon"><i class="bx bx-arch"></i></div>
-                        <h4><a href="">Divera don</a></h4>
-                        <p>Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur</p>
+                        <h4><a href="">ข้อมูลส่วนตัวของฉัน</a></h4>
+                        <p>พื้นที่สำหรับข้อมูลส่วนตัวของบริษัทของท่าน โดยท่านสามารถทำการเรียกดู แก้ไข เพิ่มรายละเอียดได้ง่ายๆเพียงกดตรงนี้</p>
                     </div>
                 </div>
 
