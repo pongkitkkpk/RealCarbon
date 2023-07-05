@@ -110,7 +110,7 @@
                                     <li><a href="#">Drop Down 4</a></li>
                                 </ul>
                             </li>
-                            <li><a class="nav-link scrollto" href="#empty">empty</a></li>
+                            <li><a class="nav-link scrollto" href="../tablepage/table.php">test table</a></li>
                         </ul>
                         <i class="bi bi-list mobile-nav-toggle"></i>
                     </nav><!-- .navbar -->
@@ -119,7 +119,7 @@
                         <span><i class="bi bi-bell " style="font-size: 20px"></i></span>
                         <span class="badge">3</span>
                     </a>
-                    <a href="forms/login/logout_pro.php" class="get-started-btn scrollto">logout</a>
+                    <a href="../login/logout_pro.php" class="get-started-btn scrollto">logout</a>
                 </div>
             </div>
 

@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (isset($_SESSION["id"])) {
-    header("location:../../index.php");
+    header("location:../homepage/home.php");
     die();
 }
 ?>
@@ -24,7 +24,7 @@ if ($result->rowCount() == 1) {
     $_SESSION["Detail_Company"] = $data["Detail_Company"];
     $_SESSION["time"] = $data["time"];
     $_SESSION["id"] = session_id();
-    header("Location:../../index.php");
+    header("Location:../homepage/home.php");
     die();
 } else {
     $_SESSION["error"] = 1;
