@@ -39,7 +39,7 @@
                     </nav><!-- .navbar -->
                     <!-- <a href="#about" class="get-started-btn scrollto">Get Started</a> -->
                     <a href=""></a>
-                    <a class="get-started-btn scrollto" href="forms/login/login_page.php"><i class="bi bi-person-circle"></i> ลงชื่อเช้า / สมัครสมาชิก</a>
+                    <a class="get-started-btn scrollto" href="../login/login_page.php"><i class="bi bi-person-circle"></i> ลงชื่อเช้า / สมัครสมาชิก</a>
 
 
                 </div>
