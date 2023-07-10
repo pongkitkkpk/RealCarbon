@@ -111,12 +111,12 @@ h6 {
   transition: all 0.5s;
   z-index: 997;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  background-color: rgba(103, 133, 102, 0.8);
+  background-color: rgba(103, 133, 102, 0.6);
 }
 
 #header.header-scrolled,
 #header.header-inner-pages {
-  background: rgba(40, 40, 40, 0.9);
+  background: rgba(56 ,61 ,51 , 0.9);
 }
 
 #header .logo {
@@ -671,17 +671,30 @@ section {
 }
 
 .services .color1 {
-  background-color: #678566;
+  background-color: rgba(103,133,102,0.9);
 }
 
 .services .color2 {
-  background-color: #cdcf9f;
+  background-color: rgba(190,189,120,0.8);
 }
 
 .services .icon-box .icon {
   width: 64px;
   height: 64px;
-  background: #009961;
+  background: rgba(190,189,120,0.8);
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transition: ease-in-out 0.3s;
+  color: #fff;
+}
+
+.services .icon-box .icon {
+  width: 64px;
+  height: 64px;
+  background: rgba(103,133,102,0.9); 
   border-radius: 50px;
   display: flex;
   align-items: center;
@@ -693,6 +706,7 @@ section {
 
 .services .icon-box .icon i {
   font-size: 28px;
+  
 }
 
 .services .icon-box h4 {
@@ -714,13 +728,16 @@ section {
 
 .services .icon-box:hover {
   transform: translateY(-10px);
-  border-color: #009961;
+  border-color: #383d33;
 }
 
-.services .icon-box:hover h4 a {
-  color: #009961;
+.services .icon-box:hover h4 a#yellow {
+  color: #caca4a;
 }
 
+.services .icon-box:hover h4 a#green {
+  color: #426f1e;
+}
 /*--------------------------------------------------------------
 # Cta
 --------------------------------------------------------------*/

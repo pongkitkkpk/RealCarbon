@@ -98,7 +98,7 @@ session_start();
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
                     <div class="icon-box color1">
                         <div class="icon"><i class="bx bxl-dribbble"></i></div>
-                        <h4><a href="">ตลาดคาร์บอนเครดิต</a></h4>
+                        <h4><a id="yellow" href="">ตลาดคาร์บอนเครดิต</a></h4>
                         <p>ศูนย์รวมบริษัทในเว็บไซต์ของเราสำหรับลูกค้าที่ต้องการทราบข้อมูลและรายละเอียดต่างๆ
                             เพื่อประกอบการตัดสินใจในการซื้อหรือการขายคาร์บอนเครดิตของท่าน</p>
                     </div>
@@ -107,7 +107,7 @@ session_start();
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
                     <div class="icon-box color2">
                         <div class="icon"><i class="bx bx-file"></i></div>
-                        <h4><a href="">การซื้อคาร์บอนเครดิต</a></h4>
+                        <h4><a id="green" href="">การซื้อคาร์บอนเครดิต</a></h4>
                         <p>พื้นที่สำหรับลูกค้าที่สนใจและต้องการรายละเอียดสำหรับการซื้อคาร์บอนเครดิต</p>
                     </div>
                 </div>
@@ -115,7 +115,7 @@ session_start();
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
                     <div class="icon-box color1">
                         <div class="icon"><i class="bx bx-tachometer"></i></div>
-                        <h4><a href="">การขายคาร์บอนเครดิต</a></h4>
+                        <h4><a id="yellow" href="">การขายคาร์บอนเครดิต</a></h4>
                         <p>พื้นที่สำหรับลูกค้าที่สนใจและต้องการรายละเอียดสำหรับการขายคาร์บอนเครดิต</p>
                     </div>
                 </div>
@@ -123,7 +123,7 @@ session_start();
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
                     <div class="icon-box color2">
                         <div class="icon"><i class="bx bx-world"></i></div>
-                        <h4><a href="">เช็คสถานะบริษัทผู้ค้า/ผู้ขาย</a></h4>
+                        <h4><a id="green" href="">เช็คสถานะบริษัทผู้ค้า/ผู้ขาย</a></h4>
                         <p>เช็คสถานะบริษัทผู้ค้าและผู้ขายที่ท่านต้องการทราบรายละเอียดได้เลยที่นี่!</p>
                     </div>
                 </div>
@@ -131,7 +131,7 @@ session_start();
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
                     <div class="icon-box color1">
                         <div class="icon"><i class="bx bx-slideshow"></i></div>
-                        <h4><a href="">คำนวนคาร์บอนเครดิต</a></h4>
+                        <h4><a id="yellow" href="">คำนวนคาร์บอนเครดิต</a></h4>
                         <p>การทดลองคำนวนจำนวนของคาร์บอนเครดิตที่ท่านต้องการทำการซื้อขายภายในเว็บไซต์ของเรา
                             เพื่อประกอบการตัดสินใจในการซื้อหรือการขายคาร์บอนเครดิตของท่าน
                         </p>
@@ -141,7 +141,7 @@ session_start();
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
                     <div class="icon-box color2">
                         <div class="icon"><i class="bx bx-arch"></i></div>
-                        <h4><a href="">ข้อมูลส่วนตัวของฉัน</a></h4>
+                        <h4><a id="green" href="">ข้อมูลส่วนตัวของฉัน</a></h4>
                         <p>พื้นที่สำหรับข้อมูลส่วนตัวของบริษัทของท่าน โดยท่านสามารถทำการเรียกดู แก้ไข เพิ่มรายละเอียดได้ง่ายๆเพียงกดตรงนี้</p>
                     </div>
                 </div>
