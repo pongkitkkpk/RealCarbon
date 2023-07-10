@@ -4,7 +4,7 @@ session_start();
 //     header("location:tableCC.php");
 //     die();
 // }else {
-  $id = $_GET['id'];
+   $id = $_GET['id'];
 // }
 ?>
 <!DOCTYPE html>
@@ -87,6 +87,15 @@ session_start();
         </div>
       </div>
 
+
+      <!-- แสดงผลตั้งขาย -->
+      <!-- $data = $conn ->query("SELET m.Name_Company,m.Email,m.Phone,
+                                        t.transection_No,t.name_com_owner_tran,t.status,t.price,t.totalcc,t.IsClear,
+                                        tc.id,tc.type
+                                  FROM tab t,tab_category tc,member m
+                                  WHERE m.Name_Company=t.name_com_owner_tran
+                                        AND t.IsClear=1 AND tc.type =2 AND tc.type =t.status
+                                  ORDER BY t.transection_No DESC;") -->
       <br>
       <table class="table table-responsive-xl">
 						  <thead>
@@ -101,10 +110,7 @@ session_start();
 						  <tbody>
 						    <tr class="alert" role="alert">
 						    	<td>
-						    		<label class="checkbox-wrap checkbox-primary">
-										  <input type="checkbox" checked>
-										  <span class="checkmark"></span>
-										</label>
+						    		
 						    	</td>
 						      <td class="d-flex align-items-center">
 						      	<div class="img" style="background-image: url(images/person_1.jpg);"></div>
@@ -122,10 +128,7 @@ session_start();
 						    </tr>
 						    <tr class="alert" role="alert">
 						    	<td>
-						    		<label class="checkbox-wrap checkbox-primary">
-										  <input type="checkbox">
-										  <span class="checkmark"></span>
-										</label>
+						    		
 						    	</td>
 						      <td class="d-flex align-items-center">
 						      	<div class="img" style="background-image: url(images/person_2.jpg);"></div>

@@ -18,6 +18,10 @@ $_SESSION["Islogin"] = "true";
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pridi:wght@300&display=swap" rel="stylesheet">
 
+    <!-- Vendor CSS Files -->
+   
+    <link href="../../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
 </head>
 
 <body class="bg">
@@ -78,11 +82,27 @@ $_SESSION["Islogin"] = "true";
                                 </div>
                             </div>
                         </div>
+                        
                     </div>
+                    <h1 class="mb-0 mt-4 text-center"><a href="../homepage/home.php" class="bach-to-home"><i class="bi bi-arrow-left-short"></i></a></h1>
                 </div>
+                
             </div>
+            
         </div>
+        
     </div>
+
+
+    <!-- Vendor JS Files -->
+    <script src="../../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="../../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="../../assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="../../assets/js/main.js"></script>
 </body>
 
 </html>
