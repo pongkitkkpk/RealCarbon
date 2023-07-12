@@ -675,7 +675,7 @@ section {
 }
 
 .services .color2 {
-  background-color: rgba(190,189,120,0.8);
+  background-color: rgba(190,189,120,0.9);
 }
 
 .services .icon-box .icon {
@@ -694,7 +694,7 @@ section {
 .services .icon-box .icon {
   width: 64px;
   height: 64px;
-  background: rgba(103,133,102,0.9); 
+  background: rgba(40,40,40,0.3); 
   border-radius: 50px;
   display: flex;
   align-items: center;
@@ -732,11 +732,11 @@ section {
 }
 
 .services .icon-box:hover h4 a#yellow {
-  color: #caca4a;
+  color: #cfeccf;
 }
 
 .services .icon-box:hover h4 a#green {
-  color: #426f1e;
+  color: #fffeaa;
 }
 /*--------------------------------------------------------------
 # Cta
