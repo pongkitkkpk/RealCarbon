@@ -42,6 +42,7 @@ $id = $_GET['id'];
 
 <body>
   <?php include "../../navbar.php" ?>
+  <!-- ======= Hero Section ======= -->
   <section id="hero" class="hero d-flex flex-column justify-content-center">
     <div class="container">
       <div class="row justify-content-center">
@@ -54,38 +55,39 @@ $id = $_GET['id'];
     </div>
   </section><!-- End Hero -->
 
-  <div class="container fluid" style="background-color: red;">
+
+  <div class="container fluid">
+    <!-- ======= Down Menu ======= -->
     <?php
     $conn = new PDO("mysql:host=localhost;dbname=dbbscarbon;charset=utf8", "root", "");
     $sql = "SELECT * FROM tab_category";
     ?>
     <div class="d-flex">
-      <div>
-        <label>หมวดหมู่</label>
-        <span class="dropdown">
-          <button class="btn btn-light dropdown-toggle btn-bs" type="data" id="button2" data-bs-toggle="dropdown" aria-expanded="false">
-            <?php
-            if ($id != 0)
-              foreach ($conn->query("SELECT type FROM tab_category WHERE id = $id") as $row) {
-                echo $row['0'];
-              }
-            else {
-              echo '--ทั้งหมด--';
+      <label>หมวดหมู่</label>
+      <span class="dropdown">
+        <button class="btn btn-light dropdown-toggle btn-bs" type="data" id="button2" data-bs-toggle="dropdown" aria-expanded="false">
+          <?php
+          if ($id != 0)
+            foreach ($conn->query("SELECT type FROM tab_category WHERE id = $id") as $row) {
+              echo $row['0'];
             }
-            ?>
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="button2">
-            <?php
-            echo "<li><a href=\"table.php?id=0\" class='dropdown-item' value=0 > ---ทั้งหมด---</a></li>";
-            foreach ($conn->query($sql) as $row) {
-              echo "<li><a href=\"table.php?id=" . $row['0'] . "\" class='dropdown-item' value=" . $row['id'] . ">" . $row['type'] . "</a></li>";
-            }
-            $conn = null;
-            ?>
-          </ul>
-        </span>
-      </div>
+          else {
+            echo '--ทั้งหมด--';
+          }
+          ?>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="button2">
+          <?php
+          echo "<li><a href=\"table.php?id=0\" class='dropdown-item' value=0 > ---ทั้งหมด---</a></li>";
+          foreach ($conn->query($sql) as $row) {
+            echo "<li><a href=\"table.php?id=" . $row['0'] . "\" class='dropdown-item' value=" . $row['id'] . ">" . $row['type'] . "</a></li>";
+          }
+          $conn = null;
+          ?>
+        </ul>
+      </span>
     </div>
+    <!-- Down Menu -->
 
 
     <!-- แสดงผลตั้งขาย -->
@@ -97,124 +99,140 @@ $id = $_GET['id'];
                                         AND t.IsClear=1 AND tc.type =2 AND tc.type =t.status
                                   ORDER BY t.transection_No DESC;") -->
     <br>
-    <table class="table table-responsive-xl">
-      <thead>
-        <tr>
-          <th>Transection number</th>
-          <!-- <th>&nbsp;</th> -->
-          <th>Namecompany</th>
-          <th>Status</th>
-          <th>price</th>
-          <th>totleCC</th>
-        </tr>
-      </thead>
-      <tbody>
+    <section id="faq" class="faq">
+      <div class="table-responsive">
+        <table class="table table table-hover align-cc mb-0 table accordion">
+          <thead>
+            <tr>
+              <th>Transection number</th>
+              <!-- <th>&nbsp;</th> -->
+              <th>Namecompany</th>
+              <th>Status</th>
+              <th>price</th>
+              <th>totleCC</th>
+              <th>&nbsp;</th>
+            </tr>
+          </thead>
+          <tbody class="content">
 
-        <?php
-        $conn = new PDO("mysql:host=localhost;dbname=dbbscarbon;charset=utf8", "root", "");
-        $conn->exec("SET CHARACTER SET utf8");
-        $data = $conn->query("SELECT m.Name_Company,m.Email,m.Phone,
+            <?php
+            $conn = new PDO("mysql:host=localhost;dbname=dbbscarbon;charset=utf8", "root", "");
+            $conn->exec("SET CHARACTER SET utf8");
+            $data = $conn->query("SELECT m.Name_Company,m.Email,m.Phone,
                                      t.transection_No,t.name_com__owner_tran,t.status,t.price,t.totalcc,t.IsClear,
                                      tc.id,tc.type
                               FROM tab t , tab_category tc , member m
                               WHERE m.Name_Company=t.name_com__owner_tran AND t.IsClear=1 
-                              ORDER BY t.transection_No DESC;");
-        $alert = "alert";
-        if ($data !== false) {
-          while ($row = $data->fetch()) {
-            // echo "<tr><td><a href=\"post.php?id=".$row['0'].'\" style=text-decoration:none></a>"; 
-            echo "<tr class=\"alert\" role =\"alert\" > <td>";
-            // echo "<tr><td>";
-            echo  $row['3'];
-            echo "</td><td>";
-            echo  $row['0'];
-            echo "</td>";
-            if ($row['5'] == 1){
-              echo "<td class=\"status\"><span class=\"active\">Buy</span></td>";
-            } else{
-              echo "<td class=\"status\"><span class=\"active\">Buy</span></td>";
+                              ORDER BY t.transection_No ;");
+            if ($data !== false) {
+              while ($row = $data->fetch()) {
+                echo "<tr data-bs-toggle=\"collapse \" data-bs-target=\"#r".$row['3']."\"><th>";
+                echo  $row['3'];
+                echo "</th><td>";
+                echo  $row['0'];
+                echo "</td>";
+                if ($row['5'] == 1) {
+                  echo "<td class=\"status\"><span class=\"activebuy\">Buy</span></td>";
+                } else if ($row['5'] == 2) {
+                  echo "<td class=\"status\"><span class=\"activesell\">Sell</span></td>";
+                } else {
+                  echo "<td class=\"status\"><span class=\"waiting\">wantted</span></td>";
+                }
+                echo "<td>";
+                echo  $row['6'];
+                echo "</td><td>";
+                echo $row['7'];
+                echo "</td>";
+                echo "</tr>";
+                echo "<tr class=\"collapse accordion-collapse\" id=\"r".$row['3']."\" data-bs-parent=\".table\">";
+                echo"<td colspan=\"5\"> Item 1 detail .. This is the first item's accordion body.  tem 1 detail .. This is the first item's accordion bodyasdffffffffffffffffffffffffffffffffffffffffffffffffffffff</td>";
+                echo "</tr>";
+              }
             }
-            
+            $conn = null;
+            ?>
 
-            echo "<td>";
-            echo "[ " . $row['3'] . " ] ";
-            echo "</td><td>";
-            echo "[ " . $row['4'] . " ] ";
-            echo "[ " . $row['5'] . " ] ";
-            echo "[ " . $row['6'] . " ] ";
-            echo "[ " . $row['7'] . " ] ";
-            echo "</td></tr>";
-          }
-        }
-        $conn = null;
-        ?>
-
-        <!-- <tr class="alert" role="alert">
-          <td>
-
-          </td>
-          <td class="d-flex align-items-center">
-            <div class="img" style="background-image: url(images/person_1.jpg);"></div>
-            <div class="pl-3 email">
-              <span>markotto@email.com</span>
-              <span>Added: 01/03/2020</span>
-            </div>
-          </td>
-          <td class="status"><span class="active">Buy</span></td>
-          <td>Markotto89</td>
-
-          <td>
-
-          </td>
-        </tr>
-        <tr class="alert" role="alert">
-          <td>
-
-          </td>
-          <td class="d-flex align-items-center">
-            <div class="img" style="background-image: url(images/person_2.jpg);"></div>
-            <div class="pl-3 email">
-              <span>jacobthornton@email.com</span>
-              <span>Added: 01/03/2020</span>
-            </div>
-          </td>
-          <td>Jacobthornton</td>
-          <td class="status"><span class="waiting">Waiting for Resassignment</span></td>
-          <td>
-
-
-          </td>
-        </tr> -->
-
-      </tbody>
-    </table>
-
-    <?php
-    // $conn = new PDO("mysql:host=localhost;dbname=webboard;charset=utf8", "root", "");
-    // $conn->exec("SET CHARACTER SET utf8");
-    // if ($id != 0) {
-    //   $data = $conn->query("SELECT p.id,p.title,p.content,p.post_date ,c.name,u.name FROM post p , user u , category c WHERE p.cat_id = c.id AND c.id = $id AND p.user_id = u.id order by p.id DESC;");
-    // } else {
-    //   $data = $conn->query("SELECT p.id,p.title,p.content,p.post_date ,c.name,u.name FROM post p , user u , category c WHERE p.cat_id = c.id AND p.user_id = u.id order by p.id DESC;");
-    // }
-    // if ($data !== false) {
-    //   while ($row = $data->fetch()) {
-    //     // echo "<tr><td><a href=\"post.php?id=".$row['0'].'\" style=text-decoration:none></a>"; 
-    //     echo "<tr><td>";
-    //     echo "[ " . $row['4'] . " ] ";
-    //     echo "<a href=\"post.php?id=" . $row['0'] . "\" style=text-decoration:none>";
-    //     echo $row['1'] . "</a>";
-    //     echo "<br>";
-    //     echo $row['5'] . " - " . $row['3'];
-    //     echo "</td></tr>";
-    //   }
-    // }
-    // $conn = null;
-    ?>
-
-
-
+          </tbody>
+        </table>
+      </div>
   </div>
+  </section>
+  <!-- ======= Faq Section ======= -->
+  <section id="faq" class="faq">
+    <div class="container-fluid">
+
+      <div class="row">
+
+        <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
+
+          <div class="content">
+            <h3>Frequently Asked <strong>Questions</strong></h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Duis aute irure dolor in reprehenderit
+            </p>
+          </div>
+
+          <div class="accordion-list">
+            <ul>
+              <li>
+                <a data-bs-toggle="collapse" data-bs-target="#accordion-list-1" class="collapse">Non consectetur a
+                  erat nam at lectus urna duis? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list">
+                  <p>
+                    Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur
+                    gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+                  </p>
+                </div>
+              </li>
+
+              <li>
+                <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed">Feugiat scelerisque
+                  varius morbi enim nunc? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
+                  <p>
+                    Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet
+                    id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est
+                    pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt
+                    dui.
+                  </p>
+                </div>
+              </li>
+
+              <li>
+                <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed">Dolor sit amet
+                  consectetur adipiscing elit? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
+                  <p>
+                    Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar
+                    elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque
+                    eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis
+                    sed odio morbi quis
+                  </p>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img" style='background-image: url("assets/img/faq.jpg");'>&nbsp;</div>
+      </div>
+
+    </div>
+  </section><!-- End Faq Section -->
+
+
+
 </body>
 
 </html>
+
+<script>
+  $(function(){
+  $(".fold-table tr.view").on("click", function(){
+    $(this).toggleClass("open").next(".fold").toggleClass("open");
+  });
+});
+</script>
