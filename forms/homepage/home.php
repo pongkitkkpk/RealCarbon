@@ -151,6 +151,34 @@ session_start();
         </div>
     </section><!-- End Services Section -->
 
+    <!-- ======= Contact2 Section ======= -->
+    <section id="contact2" class="contact">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>คณะผู้จัดทำ</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
+            consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
+            in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+      </div>
+    </section><!-- End Contact2 Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>ผู้สนับสนุนหลัก</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
+            consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
+            in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
 
     <!-- ======= Footer ======= -->
     <footer id="footer">
