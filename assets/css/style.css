@@ -11,8 +11,7 @@
 
 body {
   font-family: 'Pridi', serif;
-  color: #444444;
-  background-color: rgba(229,236,227);
+  background-color: #fff;
 }
 
 a {
@@ -242,7 +241,7 @@ h6 {
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover>a {
-  color: #fff;
+  color: #cdcf9f;
 }
 
 .navbar .dropdown ul {
@@ -570,7 +569,7 @@ section {
 }
 
 .section-bg {
-  background-color: #8fffd6;
+  background-color: #fff;
 }
 
 .section-title {
@@ -605,6 +604,10 @@ section {
 /*--------------------------------------------------------------
 # About Us
 --------------------------------------------------------------*/
+.about {
+  background-color: rgba(229,237,228);
+}
+
 .about .content h3 {
   font-weight: 600;
   font-size: 26px;
@@ -1315,6 +1318,13 @@ section {
   100% {
     transform: rotate(360deg);
   }
+}
+
+/*--------------------------------------------------------------
+# Contact2
+--------------------------------------------------------------*/
+.contact2 {
+background-color: rgba(229,237,228);
 }
 
 /*--------------------------------------------------------------
