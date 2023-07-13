@@ -1480,7 +1480,12 @@ tr {
   text-align: center;
 }
 
-
+.card-header{
+  color: #009961;
+}
+.card-body{
+  align: left;
+}
 
 /*--------------------------------------------------------------
 # Faq

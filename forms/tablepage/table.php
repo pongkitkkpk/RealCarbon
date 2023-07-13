@@ -100,7 +100,7 @@ $id = $_GET['id'];
                                   ORDER BY t.transection_No DESC;") -->
     <br>
     <section id="faq" class="faq">
-      <div class="table-responsive">
+      <div style="overflow-x:auto;">
         <table class="table table table-hover align-cc mb-0 table accordion">
           <thead>
             <tr>
@@ -124,29 +124,64 @@ $id = $_GET['id'];
                               FROM tab t , tab_category tc , member m
                               WHERE m.Name_Company=t.name_com__owner_tran AND t.IsClear=1 
                               ORDER BY t.transection_No ;");
+            $test = "";
             if ($data !== false) {
               while ($row = $data->fetch()) {
-                echo "<tr data-bs-toggle=\"collapse \" data-bs-target=\"#r".$row['3']."\"><th>";
-                echo  $row['3'];
-                echo "</th><td>";
-                echo  $row['0'];
-                echo "</td>";
-                if ($row['5'] == 1) {
-                  echo "<td class=\"status\"><span class=\"activebuy\">Buy</span></td>";
-                } else if ($row['5'] == 2) {
-                  echo "<td class=\"status\"><span class=\"activesell\">Sell</span></td>";
+
+                if ($test == $row['3']) {
+                  continue;
                 } else {
-                  echo "<td class=\"status\"><span class=\"waiting\">wantted</span></td>";
+                  echo "<tr data-bs-toggle=\"collapse\" data-bs-target=\"#r" . $row['3'] . "\"><th>";
+                  echo  $row['3'];
+                  echo "</th><td>";
+                  echo  $row['0'];
+                  echo "</td>";
+                  if ($row['5'] == 1) {
+                    echo "<td class=\"status\"><span class=\"activebuy\">Buy</span></td>";
+                  } else if ($row['5'] == 2) {
+                    echo "<td class=\"status\"><span class=\"activesell\">Sell</span></td>";
+                  } else {
+                    echo "<td class=\"status\"><span class=\"waiting\">wantted</span></td>";
+                  }
+                  echo "<td>";
+                  echo  $row['6'];
+                  echo "</td><td>";
+                  echo $row['7'];
+                  echo "</td><td></td>";
+                  echo "</tr>";
+                  // echo "<tr class=\"collapse \" id=\"r" . $row['3'] . "\" data-bs-parent=\".table\" data-toggle=\"collapse\">";
+                  // echo "<td style = \"text-align:left\" colspan=\"2\"> ข้อมูลเจ้าของtransection <br>";
+                  // echo "<br>ชื่อบริษัท " . $row['0'] . "";
+                  // echo "<br>ช่องทางการติดต่อ : <br> ";
+                  // echo "Email : " . $row['1'] . "<br>";
+                  // echo "Phone : " . $row['2'] . "<br>";
+                  // echo "</td>";
+                  // echo "</tr>";
+                  echo "<tr><td colspan=\"6\">";
+                  echo "<div class=\"collapse \" id=\"r" . $row['3'] . "\" data-bs-parent=\".table\" data-toggle=\"collapse\">";
+
+                  echo "<div class=\"card\">";
+                  if ($row['5'] == 1) {
+                    echo "<div class=\"card-header\" style=\"color: #23bd5a;\">";
+                  } else if ($row['5'] == 2) {
+                    echo "<div class=\"card-header\" style=\"color: #a73a1f;\">";
+                  } else {
+                    echo "<div class=\"card-header\" style=\"color: #cfa00c;\">";
+                  }
+                  echo "รายละเอียดเจ้าของ transection";
+                  echo "</div>";
+
+                  echo "<div class=\"card-body\">";
+                  echo "<h5 class=\"card-title\">asdfdsf</h5> ";
+                  echo "<p class=\"card-text\"> ชื่อบริษัท " . $row['0'] . " <br></p>";
+                  echo "</div>";
+
+                  echo "</div>";
+                  echo "</div>";
+
+                  echo "</td></tr>";
                 }
-                echo "<td>";
-                echo  $row['6'];
-                echo "</td><td>";
-                echo $row['7'];
-                echo "</td>";
-                echo "</tr>";
-                echo "<tr class=\"collapse accordion-collapse\" id=\"r".$row['3']."\" data-bs-parent=\".table\">";
-                echo"<td colspan=\"5\"> Item 1 detail .. This is the first item's accordion body.  tem 1 detail .. This is the first item's accordion bodyasdffffffffffffffffffffffffffffffffffffffffffffffffffffff</td>";
-                echo "</tr>";
+                $test = $row['3'];
               }
             }
             $conn = null;
@@ -228,11 +263,3 @@ $id = $_GET['id'];
 </body>
 
 </html>
-
-<script>
-  $(function(){
-  $(".fold-table tr.view").on("click", function(){
-    $(this).toggleClass("open").next(".fold").toggleClass("open");
-  });
-});
-</script>
