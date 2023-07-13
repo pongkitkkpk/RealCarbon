@@ -698,7 +698,7 @@ section {
 .services .icon-box .icon {
   width: 64px;
   height: 64px;
-  background: rgba(103,133,102,0.9); 
+  background: rgba(30,30,30,0.3); 
   border-radius: 50px;
   display: flex;
   align-items: center;
