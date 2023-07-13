@@ -152,7 +152,7 @@ session_start();
     </section><!-- End Services Section -->
 
     <!-- ======= Contact2 Section ======= -->
-    <section id="contact2" class="contact">
+    <section id="contact2" class="contact2">
       <div class="container">
 
         <div class="section-title">
