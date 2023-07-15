@@ -120,10 +120,10 @@ session_start();
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" onclick="location.href='../history/historypage.php';">
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
                     <div class="icon-box color2">
                         <div class="icon"><i class="bi bi-person-vcard"></i></div>
-                        <h4><a id="green" href="">เช็คประวัติการซื้อคาร์บอนเครดิต</a></h4>
+                        <h4><a id="green" href="">เช็คสถานะบริษัทผู้ค้า/ผู้ขาย</a></h4>
                         <p>เช็คสถานะบริษัทผู้ค้าและผู้ขายที่ท่านต้องการทราบรายละเอียดได้เลยที่นี่!</p>
                     </div>
                 </div>

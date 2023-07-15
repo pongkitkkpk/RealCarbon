@@ -125,23 +125,52 @@ session_start();
     <section id="about" class="about">
         <div class="container">
             <div class="section-title">
-               
+
                 <div class="row content">
-                <h2>ขาย carbon ค้าบบ</h2>
-                <form action="sell_pro.php" method="GET">
-                    <label style="margin-top: 2%;">การขายCC</label>
-                    <input type="text" name="CC" placeholder="เหลือ <?php echo $_SESSION["ccbalance"]; ?> RetailCC" class="formbold-form-input" required/>
-                    <label style="margin-top: 2%;">ราคา</label>
-                    <input type="text" name="price" placeholder="ราคา สมมติ" class="formbold-form-input" required/>
-                    <button class="btn-learn-more" type="submit" style="margin-top: 2%;">
-                        ตกลง
-                    </button>
-                </form>
-                    
+                    <h2>ขาย carbon ค้าบบ</h2>
+
+                    <div class="card-block">
+                        <form class="formrun" action="sell_pro.php" method="get" data-formrun-alert-dialog>
+                            <div class="form-group" data-formrun-class-if-success="has-success" data-formrun-class-if-error="has-danger" data-formrun-target="CC">
+                                <label class="form-control-label" for="name">การขาย CC</label>
+                                <input type="text" class="form-control" name="CC" placeholder="เหลือ <?php echo $_SESSION["ccbalance"]; ?> RetailCC" data-formrun-required data-formrun-class-if-success="form-control-success" data-formrun-class-if-error="form-control-danger">
+                                <div class="text-danger" data-formrun-show-if-error="price">กรุณาใส่จำนวน retailCC ที่จะซื้อ</div>
+                                <?php 
+                                if (isset($_SESSION["errorcc"])) {
+                                    echo "<div class=\"text-danger\">โปรดใส่ จำนวน Retail ที่เหมาะสม</div>";
+                                    unset($_SESSION["errorcc"]);
+                                }?>
+                                
+    
+                                
+                            </div>
+                            <div class="form-group" data-formrun-class-if-success="has-success" data-formrun-class-if-error="has-danger" data-formrun-target="price">
+                                <label class="form-control-label" for="name">ราคา</label>
+                                <input type="text" class="form-control" name="price" placeholder="ราคา สมมติ" data-formrun-required data-formrun-class-if-success="form-control-success" data-formrun-class-if-error="form-control-danger">
+                                <div class="text-danger" data-formrun-show-if-error="price">ใส่ราคาที่ถูกต้อง</div>
+                            </div>
+                            <br>
+                            <div>
+                                <button type="submit" class="btn-learn-more" data-formrun-error-text="ซื้อไม่ได้">ตกลงซื้อ</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- <form action="sell_pro.php" method="GET">
+                        <label style="margin-top: 2%;">การขายCC</label>
+                        <input type="text" name="CC" placeholder="เหลือ <?php echo $_SESSION["ccbalance"]; ?> RetailCC" class="formbold-form-input" required />
+                        <label style="margin-top: 2%;">ราคา</label>
+                        <input type="text" name="price" placeholder="ราคา สมมติ" class="formbold-form-input" required />
+                        <button class="btn-learn-more" type="submit" style="margin-top: 2%;">
+                            ตกลง
+                        </button>
+                    </form> -->
+
                 </div>
             </div>
+        </div>
     </section>
     <!-- End About Us Section -->
+
 
 
     <div id="preloader"></div>
@@ -153,6 +182,7 @@ session_start();
     <script src="../../assets/vendor/glightbox/js/glightbox.min.js"></script>
     <script src="../../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="../../assets/vendor/php-email-form/validate.js"></script>
+    <script src="../../assets/vendor/formrun.js"></script>
 
     <!-- Template Main JS File -->
     <script src="../../assets/js/main.js"></script>
