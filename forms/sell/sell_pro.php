@@ -4,6 +4,8 @@ if (!isset($_SESSION["id"])) {
     header("location:../login/login_page.php");
     die();
 }
+
+
 ?>
 
 <?php
@@ -16,13 +18,10 @@ $id_com = $_SESSION["ID_Company"];
 $status = 1;
 
 
-
 $currentcc = $oldcc - $cc;
 $currentmoney = $oldmoney + $price;
-if ($currentcc < 0) {
-    $_SESSION["errorcc"]="ไม่มี RetailCC มากพอ กรุณาติดต่อเจ้าหน้าที่";
-    header("location:sellpage.php");
-} else {
+
+
     $conn = new PDO("mysql:host=localhost;dbname=dbbscarbon;charset=utf8", "root", "");
     //ปรับเป็น ไทม์โซน ไทย
     date_default_timezone_set('Asia/Bangkok');
@@ -31,9 +30,9 @@ if ($currentcc < 0) {
                         VALUES('$cc','$currentcc','$price','$currentmoney','$id_com','$time',$status)";
     $conn->exec($sql);
     $_SESSION["ccbalance"] = $currentcc;
-    $_SESSION["moneybalance"]=$currentmoney;
+    $_SESSION["moneybalance"] = $currentmoney;
     $conn = null;
     header("location:../homepage/home.php");
     die();
-}
+
 ?>

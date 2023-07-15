@@ -131,23 +131,21 @@ session_start();
 
                     <div class="card-block">
                         <form class="formrun" action="sell_pro.php" method="get" data-formrun-alert-dialog>
-                            <div class="form-group" data-formrun-class-if-success="has-success" data-formrun-class-if-error="has-danger" data-formrun-target="CC">
-                                <label class="form-control-label" for="name">การขาย CC</label>
-                                <input type="text" class="form-control" name="CC" placeholder="เหลือ <?php echo $_SESSION["ccbalance"]; ?> RetailCC" data-formrun-required data-formrun-class-if-success="form-control-success" data-formrun-class-if-error="form-control-danger">
-                                <div class="text-danger" data-formrun-show-if-error="price">กรุณาใส่จำนวน retailCC ที่จะซื้อ</div>
-                                <?php 
-                                if (isset($_SESSION["errorcc"])) {
-                                    echo "<div class=\"text-danger\">โปรดใส่ จำนวน Retail ที่เหมาะสม</div>";
-                                    unset($_SESSION["errorcc"]);
-                                }?>
-                                
-    
-                                
+                            <div class="form-group" data-formrun-class-if-success="has-success" data-formrun-class-if-error="has-danger" data-formrun-target="cc">
+                                <label class="form-control-label" >การขาย CC</label>
+                                <input type="number" min="0"class="form-control" name="CC" placeholder="เหลือ <?php echo $_SESSION["ccbalance"]; ?> RetailCC" 
+                                data-formrun-required data-formrun-class-if-success="form-control-success" 
+                                data-formrun-class-if-error="form-control-danger"
+                                onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))">
+                                <div class="text-danger" data-formrun-show-if-error="CC">กรุณาใส่จำนวน retailCC ที่จะซื้อ</div>
                             </div>
                             <div class="form-group" data-formrun-class-if-success="has-success" data-formrun-class-if-error="has-danger" data-formrun-target="price">
-                                <label class="form-control-label" for="name">ราคา</label>
-                                <input type="text" class="form-control" name="price" placeholder="ราคา สมมติ" data-formrun-required data-formrun-class-if-success="form-control-success" data-formrun-class-if-error="form-control-danger">
-                                <div class="text-danger" data-formrun-show-if-error="price">ใส่ราคาที่ถูกต้อง</div>
+                                <label class="form-control-label">ราคา</label>
+                                <input type="number"  min="0"class="form-control" name="price" placeholder="ราคา สมมติ" 
+                                data-formrun-required data-formrun-class-if-success="form-control-success" 
+                                data-formrun-class-if-error="form-control-danger"
+                                onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))">
+                                <div class="text-danger" data-formrun-show-if-error="price">กรุณาใส่ราคาที่จะซื้อ</div>
                             </div>
                             <br>
                             <div>
