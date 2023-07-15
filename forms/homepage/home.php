@@ -140,8 +140,8 @@ session_start();
 
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
                     <div class="icon-box color2">
-                        <div class="icon"><i class="bi bi-people"></i></div>
-                        <h4><a id="green" href="">ข้อมูลส่วนตัวของฉัน</a></h4>
+                        <div class="icon"><i class="bi bi-buildings"></i></div>
+                        <h4><a id="green" href="">ข้อมูลส่วนตัวของบริษัท</a></h4>
                         <p>พื้นที่สำหรับข้อมูลส่วนตัวของบริษัทของท่าน โดยท่านสามารถทำการเรียกดู แก้ไข เพิ่มรายละเอียดได้ง่ายๆเพียงกดตรงนี้</p>
                     </div>
                 </div>
@@ -153,32 +153,78 @@ session_start();
 
     <!-- ======= Contact2 Section ======= -->
     <section id="contact2" class="contact2">
-      <div class="container">
+        <div class="container">
 
-        <div class="section-title">
-          <h2>คณะผู้จัดทำ</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-            consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
-            in iste officiis commodi quidem hic quas.</p>
+            <div class="section-title">
+                <h2>คณะผู้จัดทำ</h2>
+                <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
+                    consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
+                    in iste officiis commodi quidem hic quas.</p>
+            </div>
+
         </div>
-
-      </div>
     </section><!-- End Contact2 Section -->
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
-      <div class="container">
+        <div class="container">
 
-        <div class="section-title">
-          <h2>ผู้สนับสนุนหลัก</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-            consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
-            in iste officiis commodi quidem hic quas.</p>
+            <div class="section-title">
+                <h2>ผู้สนับสนุนหลัก</h2>
+                <p>ขอขอบคุณผู้สนับสนุนทุกท่านที่ร่วมกันสนับสนุนให้มีโครงการที่ดีเช่นนี้เกิดขึ้นนะครับ/ค่ะ</p>
+                <p>&nbsp;</p>
+                <div class="row" style="text-align: center; vertical-align:middle; padding: 35px;">
+                    <div class="col-xs-12 col-md-3" style="padding: 5px">
+                        <div class="element">
+                            <img style="position: relative;  top: 50%;  transform: translateY(-50%); width: 150px;
+                            height: 70px;" src="img/EXIMLogo.png" alt="Loading.."></img>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-3" style="padding: 5px">
+                        <div class="element">
+                            <img style="position: relative;  top: 50%;  transform: translateY(-50%);  width: 150px;
+                            height: 70px;" src="img/gideonOne.png" alt="Loading.."></img>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-3" style="padding: 5px">
+                        <div class="element">
+                            <img style="position: relative;  top: 50%;  transform: translateY(-50%);  width: 150px;
+                            height: 55px;" src="img/CentralRetail.png" alt="Loading.."></img>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-3" style="padding: 5px">
+                        <div class="element">
+                            <img style="position: relative;  top: 50%;  transform: translateY(-50%);  width: 220px;
+                            height: 70px;" src="img/EscoLogo.png" alt="Loading.."></img>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="text-align: center;">
+                    <div class="col-xs-12 col-md-4" style="padding: 5px">
+                        <div class="element">
+                        <img style="position: relative;  top: 50%;  transform: translateY(-50%);  width: 220px;
+                            height: 100px;" src="img/NXPOLogo.png" alt="Loading.."></img>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-4" style="padding: 5px">
+                        <div class="element">
+                        <img style="position: relative;  top: 50%;  transform: translateY(-50%);  width: 200px;
+                            height: 70px;" src="img/ChulaNewLogo.png" alt="Loading.."></img>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-4" style="padding: 5px">
+                        <div class="element">
+                        <img style="position: relative;  top: 50%;  transform: translateY(-50%);  width: 230px;
+                            height: 80px;" src="img/FTICCINewLogo.jpg" alt="Loading.."></img>
+                        </div>
+                    </div>
+                </div>
+                <p>&nbsp;</p>
+
+            </div>
+
         </div>
-
-      </div>
     </section><!-- End Contact Section -->
-
 
     <!-- ======= Footer ======= -->
     <footer id="footer">
