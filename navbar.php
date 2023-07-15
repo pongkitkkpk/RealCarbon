@@ -114,6 +114,7 @@
                                 </ul>
                             </li>
                             <li><a class="nav-link scrollto" href="../sell/sellpage.php">test sell</a></li>
+                            <li><a class="nav-link scrollto" href="../history/historypage.php">test history</a></li>
                         </ul>
                         <i class="bi bi-list mobile-nav-toggle"></i>
                     </nav><!-- .navbar -->
