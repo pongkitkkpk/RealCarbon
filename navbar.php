@@ -49,7 +49,9 @@
         </div>
     </header><!-- End Header -->
 
-<?php } else { ?>
+<?php } else { 
+    
+?>
     <!-- /*--------------------------------------------------------------
         # notification
     --------------------------------------------------------------*/ -->
@@ -111,7 +113,7 @@
                                     <li><a href="#">Drop Down 4</a></li>
                                 </ul>
                             </li>
-                            <li><a class="nav-link scrollto" href="../tablepage/table.php">test table</a></li>
+                            <li><a class="nav-link scrollto" href="../sell/sellpage.php">test sell</a></li>
                         </ul>
                         <i class="bi bi-list mobile-nav-toggle"></i>
                     </nav><!-- .navbar -->

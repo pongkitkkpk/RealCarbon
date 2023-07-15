@@ -41,11 +41,11 @@ $_SESSION["Islogin"] = "true";
                                             <h4 class="mb-4 pb-3">ลงชื่อเข้าใช้</h4>
                                             <form action="verify_pro.php" method="POST">
                                                 <div class="form-group">
-                                                    <input type="email" name="email" class="form-style" placeholder="อีเมลล์">
+                                                    <input type="email" name="email" class="form-style" placeholder="อีเมลล์" required>
                                                     <i class="input-icon uil uil-at"></i>
                                                 </div>
                                                 <div class="form-group mt-2">
-                                                    <input type="password" name="pswd" class="form-style" placeholder="รหัสผ่าน">
+                                                    <input type="password" name="pswd" class="form-style" placeholder="รหัสผ่าน" required>
                                                     <i class="input-icon uil uil-lock-alt"></i>
                                                 </div>
                                                 <button type="submit" class="btn mt-4">เข้าสู่ระบบ</button>
@@ -60,19 +60,19 @@ $_SESSION["Islogin"] = "true";
                                             <h4 class="mb-3 pb-3">สมัครสมาชิก</h4>
                                             <form action="create_pro.php" method="POST">
                                                 <div class="form-group">
-                                                    <input type="text" name="name_com" class="form-style" placeholder="ชื่อบริษัท">
+                                                    <input type="text" name="name_com" class="form-style" placeholder="ชื่อบริษัท" required>
                                                     <i class="input-icon uil uil-user"></i>
                                                 </div>
                                                 <div class="form-group mt-2">
-                                                    <input type="tel" name="phone" class="form-style" placeholder="เบอร์ติดต่อของบริษัท">
+                                                    <input type="tel" name="phone" class="form-style" placeholder="เบอร์ติดต่อของบริษัท" required>
                                                     <i class="input-icon uil uil-phone"></i>
                                                 </div>
                                                 <div class="form-group mt-2">
-                                                    <input type="email" name="email" class="form-style" placeholder="อีเมลล์สำหรับเข้าสู่ระบบ">
+                                                    <input type="email" name="email" class="form-style" placeholder="อีเมลล์สำหรับเข้าสู่ระบบ" required>
                                                     <i class="input-icon uil uil-at"></i>
                                                 </div>
                                                 <div class="form-group mt-2">
-                                                    <input type="password" name="pwd" class="form-style" placeholder="รหัสผ่านสำหรับเข้าสู่ระบบ">
+                                                    <input type="password" name="pwd" class="form-style" placeholder="รหัสผ่านสำหรับเข้าสู่ระบบ" required>
                                                     <i class="input-icon uil uil-lock-alt"></i>
                                                 </div>
                                                 <button type="submit" class="btn mt-4">ลงทะเบียน</button>
