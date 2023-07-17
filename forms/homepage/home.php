@@ -122,9 +122,9 @@ session_start();
 
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
                     <div class="icon-box color2">
-                        <div class="icon"><i class="bi bi-person-vcard"></i></div>
-                        <h4><a id="green" href="">เช็คสถานะบริษัทผู้ค้า/ผู้ขาย</a></h4>
-                        <p>เช็คสถานะบริษัทผู้ค้าและผู้ขายที่ท่านต้องการทราบรายละเอียดได้เลยที่นี่!</p>
+                        <div class="icon"><i class="bi bi-clock-history"></i></div>
+                        <h4><a id="green" href="">ประวัติการซื้อของบริษัท</a></h4>
+                        <p>ท่านสามารถเข้าดูประวัติการซื้อของท่านภายในเว็บไซต์นี้เพียงกดตรงนี้ได้เลย!</p>
                     </div>
                 </div>
 
@@ -162,7 +162,7 @@ session_start();
                 <div class="row" style="text-align: center; vertical-align:middle; padding: 35px;">
                     <div class="col-xs-12 col-md-3" style="padding: 5px">
                         <div class="element">
-                            <img style="position: relative;  top: 50%;  transform: translateY(-50%); width: 180px;
+                            <img style="position: relative;  top: 50%;  transform: translateY(-50%); width: 185px;
                             height: 70px;" src="img/EXIMLogo.png" alt="Loading.."></img>
                         </div>
                     </div>
@@ -180,7 +180,7 @@ session_start();
                     </div>
                     <div class="col-xs-12 col-md-3" style="padding: 5px">
                         <div class="element">
-                            <img style="position: relative;  top: 50%;  transform: translateY(-50%);  width: 220px;
+                            <img style="position: relative;  top: 50%;  transform: translateY(-50%);  width: 240px;
                             height: 70px;" src="img/EscoLogo.png" alt="Loading.."></img>
                         </div>
                     </div>
@@ -188,19 +188,19 @@ session_start();
                 <div class="row" style="text-align: center;">
                     <div class="col-xs-12 col-md-4" style="padding: 5px">
                         <div class="element">
-                        <img style="position: relative;  top: 50%;  transform: translateY(-50%);  width: 220px;
+                            <img style="position: relative;  top: 50%;  transform: translateY(-50%);  width: 220px;
                             height: 100px;" src="img/NXPOLogo.png" alt="Loading.."></img>
                         </div>
                     </div>
                     <div class="col-xs-12 col-md-4" style="padding: 5px">
                         <div class="element">
-                        <img style="position: relative;  top: 50%;  transform: translateY(-50%);  width: 200px;
+                            <img style="position: relative;  top: 50%;  transform: translateY(-50%);  width: 200px;
                             height: 70px;" src="img/ChulaNewLogo.png" alt="Loading.."></img>
                         </div>
                     </div>
                     <div class="col-xs-12 col-md-4" style="padding: 5px">
                         <div class="element">
-                        <img style="position: relative;  top: 50%;  transform: translateY(-50%);  width: 230px;
+                            <img style="position: relative;  top: 50%;  transform: translateY(-50%);  width: 230px;
                             height: 80px;" src="img/FTICCINewLogo.jpg" alt="Loading.."></img>
                         </div>
                     </div>
@@ -215,24 +215,14 @@ session_start();
     <!-- ======= Footer ======= -->
     <footer id="footer">
         <div class="container">
-            <h3>KnightOne</h3>
-            <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
+            <h3>CARBONX</h3>
+            <p>ผลงานการส่งประกวดของกลุ่ม Steve จากนักศึกษามหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ กทม.</p>
             <div class="social-links">
-                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
                 <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
                 <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
             </div>
             <div class="copyright">
-                &copy; Copyright <strong><span>KnightOne</span></strong>. All Rights Reserved
-            </div>
-            <div class="credits">
-                <!-- All the links in the footer should remain intact. -->
-                <!-- You can delete the links only if you purchased the pro version. -->
-                <!-- Licensing information: https://bootstrapmade.com/license/ -->
-                <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/knight-simple-one-page-bootstrap-template/ -->
-                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                &copy; Copyright <strong><span>Group Steve From KMUTNB</span></strong>. All Rights Reserved
             </div>
         </div>
     </footer><!-- End Footer -->

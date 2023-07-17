@@ -27,9 +27,8 @@ session_start();
     <link href="../../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
     <link href="../../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 
-    <!-- Template Main CSS File -->
+    <!-- Template Main CSS File --> 
     <link href="../../assets/css/style.css" rel="stylesheet">
-
 
 </head>
 
