@@ -4,7 +4,6 @@ session_start();
 //     header("location:tableCC.php");
 //     die();
 // }else {
-$id = $_GET['id'];
 // }
 ?>
 <!DOCTYPE html>
@@ -48,7 +47,7 @@ $id = $_GET['id'];
             <div class="row justify-content-center">
                 <div class="col-xl-8">
                     <h1>KnightOne - Create Bootstrap Website Template</h1>
-                    <h2>We are team of designers making websites with Bootstrap</h2>
+                    <h2>ตอนนี้คุณมี <?php echo $_SESSION["oldhavecc"] ?> Retailcc</h2>
                     <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox play-btn mb-4"></a>
                 </div>
             </div>
@@ -60,8 +59,8 @@ $id = $_GET['id'];
 
         <br>
         <section id="faq" class="faq">
-            <div style="overflow-x:auto;">
-                <table class="table table table-hover align-cc mb-0 table accordion">
+            <div style="overflow-x:auto;" class="table-responsive">
+                <table class="table table table-hover align-cc mb-0 ">
                     <thead>
                         <tr>
                             <th>Transection number</th>
@@ -76,59 +75,85 @@ $id = $_GET['id'];
                     <tbody class="content">
 
                         <?php
+                        $id_com = $_SESSION["ID_Company"];
                         $conn = new PDO("mysql:host=localhost;dbname=dbbscarbon;charset=utf8", "root", "");
                         $conn->exec("SET CHARACTER SET utf8");
                         $data = $conn->query("SELECT a.ID_transection , a.ccspent , a.price , a.id_com , a.time ,a.status,
                                          m.ID_Company,m.Name_Company
                               FROM account a , member m 
-                              WHERE a.id_com=m.ID_Company 
+                              WHERE a.id_com=$id_com and m.ID_Company=a.id_com
                               ORDER BY a.ID_transection ;");
-                        $test = "";
                         if ($data !== false) {
                             while ($row = $data->fetch()) {
-                                    echo "<tr data-bs-toggle=\"collapse\" data-bs-target=\"#r" . $row['0'] . "\"><th>";
-                                    echo  $row['0'];
-                                    echo "</th><td>";
-                                    echo  $row['7'];
-                                    echo "</td>";
-                                    if ($row['5'] == 1) {
-                                        echo "<td class=\"status\"><span class=\"activebuy\">Buy</span></td>";
-                                    } else if ($row['5'] == 2) {
-                                        echo "<td class=\"status\"><span class=\"activesell\">Sell</span></td>";
-                                    } else {
-                                        echo "<td class=\"status\"><span class=\"waiting\">wantted</span></td>";
-                                    }
-                                    echo "<td>";
-                                    echo  $row['2'];
-                                    echo "</td><td>";
-                                    echo $row['1'];
-                                    echo "</td><td> ".$row['4']."</td>";
-                                    echo "</tr>";
-                                    echo "<tr><td colspan=\"6\">";
-                                    echo "<div class=\"collapse \" id=\"r" . $row['0'] . "\" data-bs-parent=\".table\" data-toggle=\"collapse\">";
+                                echo "<tr data-bs-toggle=\"collapse\" data-bs-target=\"#r" . $row['0'] . "\"><th>";
+                                echo  $row['0'];
+                                echo "</th><td class=\"center \">";
+                                echo  $row['7'];
+                                echo "</td>";
+                                if ($row['5'] == 1) {
+                                    echo "<td class=\"status center\"><span class=\"activebuy\">Buy</span></td>";
+                                } else if ($row['5'] == 2) {
+                                    echo "<td class=\"status center\"><span class=\"activesell\">Sell</span></td>";
+                                } else {
+                                    echo "<td class=\"status center\"><span class=\"waiting\">wantted</span></td>";
+                                }
+                                echo "<td class=\"center \">";
+                                echo  $row['2'];
+                                echo "</td><td class=\"center \">";
+                                echo $row['1'];
+                                echo "</td><td class=\"center \"> " . $row['4'] . "</td>";
+                                echo "</tr>";
+                                echo "<tr><td colspan=\"6\">";
+                                echo "<div class=\"collapse \" id=\"r" . $row['0'] . "\" data-bs-parent=\".table\" data-toggle=\"collapse\">";
 
-                                    echo "<div class=\"card\">";
-                                    if ($row['5'] == 1) {
-                                        echo "<div class=\"card-header\" style=\"color: #23bd5a;\">";
-                                    } else if ($row['5'] == 2) {
-                                        echo "<div class=\"card-header\" style=\"color: #a73a1f;\">";
-                                    } else {
-                                        echo "<div class=\"card-header\" style=\"color: #cfa00c;\">";
-                                    }
-                                    echo "รายละเอียดเจ้าของ transection";
-                                    echo "</div>";
+                                echo "<div class=\"card \">";
+                                if ($row['5'] == 1) {
+                                    echo "<div class=\"card-header center\" style=\"color: #23bd5a;\">";
+                                } else if ($row['5'] == 2) {
+                                    echo "<div class=\"card-header center\" style=\"color: #a73a1f;\">";
+                                } else {
+                                    echo "<div class=\"card-header center\" style=\"color: #cfa00c;\">";
+                                }
+                                echo "Transection number  " . $row['0'] . "";
+                                echo "</div>";
 
-                                    echo "<div class=\"card-body\">";
-                                    echo "<h5 class=\"card-title\">asdfdsf</h5> ";
-                                    echo "<p class=\"card-text\"> ชื่อบริษัท " . $row['0'] . " <br></p>";
-                                    echo "</div>";
+                                echo "<div class=\"card-body\">";
+ 
 
-                                    echo "</div>";
-                                    echo "</div>";
+                                echo "<div class=\"container\">";
 
-                                    echo "</td></tr>";
+                                echo"<div class=\"row align-items-start\">";
+                                echo "<div class=\"col\"></div>";
+                                echo "<div class=\"col\">";
+                                echo"</div>";
+                                echo "<div class=\"col\"></div>";
+                                echo"</div>";
+
+                                echo"<div class=\"row align-items-center\">";
+                                echo "<div class=\"col\">";
+                                echo"<p class=\"card-text\" style=\"margin-bottom:0.25%;\"><i class=\"bi bi-cash-stack\"></i>ปริมาณการซืื้อ cc " . $row['1'] . " Retailcc<br></p>";
+                                echo "<p class=\"card-text\" style=\"margin-bottom:0.25%;\"><i class=\"bi bi-cash-stack\"></i>  ราคา " . $row['2'] . " Retailcc<br></p>";
+                                echo"</div>";
+                                echo "<div class=\"col\"></div>";
+                                echo "<div class=\"col\"></div>";
+                                echo"</div>";
                                 
-                                $test = $row['3'];
+                                echo"<div class=\"row align-items-end\">";
+                                
+                                echo "<div class=\"col\"></div>";
+                                echo "<div class=\"col\"></div>";
+                                echo "<div class=\"col\">";
+                                echo "<a href=\"#\" class=\"btn-learn-more\">Learn More</a>";
+                                echo"</div>";
+                                echo"</div>";
+
+
+
+
+                                // echo "<p class=\"card-text\" style=\"margin-bottom:0.25%;\">  <br></p>";
+                               
+
+                                echo "</td></tr>";
                             }
                         }
                         $conn = null;
@@ -139,71 +164,7 @@ $id = $_GET['id'];
             </div>
     </div>
     </section>
-    <!-- ======= Faq Section ======= -->
-    <section id="faq" class="faq">
-        <div class="container-fluid">
 
-            <div class="row">
-
-                <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
-
-                    <div class="content">
-                        <h3>Frequently Asked <strong>Questions</strong></h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua. Duis aute irure dolor in reprehenderit
-                        </p>
-                    </div>
-
-                    <div class="accordion-list">
-                        <ul>
-                            <li>
-                                <a data-bs-toggle="collapse" data-bs-target="#accordion-list-1" class="collapse">Non consectetur a
-                                    erat nam at lectus urna duis? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                                <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list">
-                                    <p>
-                                        Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur
-                                        gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
-                                    </p>
-                                </div>
-                            </li>
-
-                            <li>
-                                <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed">Feugiat scelerisque
-                                    varius morbi enim nunc? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                                <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
-                                    <p>
-                                        Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet
-                                        id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est
-                                        pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt
-                                        dui.
-                                    </p>
-                                </div>
-                            </li>
-
-                            <li>
-                                <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed">Dolor sit amet
-                                    consectetur adipiscing elit? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                                <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
-                                    <p>
-                                        Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar
-                                        elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque
-                                        eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis
-                                        sed odio morbi quis
-                                    </p>
-                                </div>
-                            </li>
-
-                        </ul>
-                    </div>
-
-                </div>
-
-                <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img" style='background-image: url("assets/img/faq.jpg");'>&nbsp;</div>
-            </div>
-
-        </div>
-    </section><!-- End Faq Section -->
 
 
 

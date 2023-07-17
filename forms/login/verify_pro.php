@@ -13,15 +13,14 @@ $sql = " SELECT * FROM member WHERE Email='$email' and password = sha1('$p') ";
 $result = $conn->query($sql);
 
 
-$account =  " SELECT * FROM account ORDER BY ID_Transection DESC LIMIT 1 ";
-$result_acc = $conn->query($account);
+
 
 if ($result->rowCount() == 1) {
     date_default_timezone_set('Asia/Bangkok');
     $time = date("Y-m-d H:i:s");
     $transec = "INSERT INTO transectionlogin (Email,time) VALUES ('$email','$time')";
     $conn->exec($transec);
-    $data=$result->fetch(PDO::FETCH_ASSOC);
+    $data = $result->fetch(PDO::FETCH_ASSOC);
     $_SESSION["ID_Company"] = $data["ID_Company"];
     $_SESSION["Name_Company"] = $data["Name_Company"];
     $_SESSION["Email"] = $data["Email"];
@@ -30,18 +29,24 @@ if ($result->rowCount() == 1) {
     $_SESSION["time"] = $data["time"];
 
     $_SESSION["id"] = session_id();
-
+    // import market database
+    $account =  " SELECT * FROM account ORDER BY ID_Transection DESC LIMIT 1 ";
+    $result_acc = $conn->query($account);
     $dataacc = $result_acc->fetch(PDO::FETCH_ASSOC);
     $_SESSION["moneybalance"] = $dataacc["moneybalance"];
     $_SESSION["ccbalance"] = $dataacc["ccbalance"];
-
-
-
+    $_SESSION["ccalluser"] = $dataacc["ccalluser"];
+    // 
+    // import old cc user
+    $sqlstore = "SELECT * FROM store ORDER BY id_store DESC LIMIT 1";
+    $result_sqlstore = $conn->query($sqlstore);
+    $dataacc = $result_sqlstore->fetch(PDO::FETCH_ASSOC);
+    $_SESSION["oldhavecc"] = $dataacc["havecc"];
+    // 
     header("Location:../homepage/home.php");
     die();
-
 } else {
-    $_SESSION["error"] = 1;
+    $_SESSION["add_login"] = "error";
     header("Location:login_page.php");
     die();
 }

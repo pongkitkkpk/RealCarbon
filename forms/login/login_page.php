@@ -19,7 +19,7 @@ $_SESSION["Islogin"] = "true";
     <link href="https://fonts.googleapis.com/css2?family=Pridi:wght@300&display=swap" rel="stylesheet">
 
     <!-- Vendor CSS Files -->
-   
+
     <link href="../../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
 
 </head>
@@ -27,6 +27,20 @@ $_SESSION["Islogin"] = "true";
 <body class="bg">
     <div class="section">
         <div class="container">
+            <?php
+            if (isset($_SESSION['add_login'])) {
+                if ($_SESSION['add_login'] == "error") {
+                    echo "<div class=\"alert alert-danger alert-dismissible fade show\" role=\"alert\">";
+                    echo "<strong>เกิดข้อผิดพลาด กรุณากรอกข้อมูลใหม่อีกครั้ง";
+                    echo "<button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\" aria-label=\"Close\"> </button>";
+                    echo "</div>";
+                } else {
+                    echo "<div class='alert alert-success alert-dismissible fade show' role=\"alert\"> เปิดบัญชีเรียบร้อยแล้ว!!</div>";
+                    echo "<button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\" aria-label=\"Close\"></button>";
+                }
+                unset($_SESSION['add_login']);
+            }
+            ?>
             <div class="row full-height justify-content-center">
                 <div class="col-12 text-center align-self-center py-5">
                     <div class="section pb-5 pt-5 pt-sm-2 text-center">
@@ -82,15 +96,15 @@ $_SESSION["Islogin"] = "true";
                                 </div>
                             </div>
                         </div>
-                        
+
                     </div>
                     <h1 class="mb-0 mt-4 text-center"><a href="../homepage/home.php" class="bach-to-home"><i class="bi bi-arrow-left-short"></i></a></h1>
                 </div>
-                
+
             </div>
-            
+
         </div>
-        
+
     </div>
 
 
@@ -100,6 +114,7 @@ $_SESSION["Islogin"] = "true";
     <script src="../../assets/vendor/glightbox/js/glightbox.min.js"></script>
     <script src="../../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="../../assets/vendor/php-email-form/validate.js"></script>
+
 
     <!-- Template Main JS File -->
     <script src="../../assets/js/main.js"></script>
