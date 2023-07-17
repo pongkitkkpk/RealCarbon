@@ -222,7 +222,7 @@ session_start();
                 <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
             </div>
             <div class="copyright">
-                &copy; Copyright <strong><span>Group Steve From KMUTNB</span></strong>. All Rights Reserved
+                &copy; Copyright <strong><span>2023, Group Steve From KMUTNB</span></strong>. All Rights Reserved
             </div>
         </div>
     </footer><!-- End Footer -->
