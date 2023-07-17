@@ -10,6 +10,7 @@ if (!isset($_SESSION["id"])) {
 
 <?php
 $cc = $_GET['CC'];
+$_SESSION["cc"]=$cc;
 $price = $_GET['price'];
 $oldcc = $_SESSION["ccbalance"];
 $oldmoney = $_SESSION["moneybalance"];
@@ -20,19 +21,17 @@ $status = 1;
 
 $currentcc = $oldcc - $cc;
 $currentmoney = $oldmoney + $price;
-
-
-    $conn = new PDO("mysql:host=localhost;dbname=dbbscarbon;charset=utf8", "root", "");
-    //ปรับเป็น ไทม์โซน ไทย
-    date_default_timezone_set('Asia/Bangkok');
-    $time = date("Y-m-d H:i:s");
-    $sql = "INSERT INTO account (`ccspent`,`ccbalance`,`price`,`moneybalance`,`id_com`,`time`,`status`)
+$conn = new PDO("mysql:host=localhost;dbname=dbbscarbon;charset=utf8", "root", "");
+//ปรับเป็น ไทม์โซน ไทย
+date_default_timezone_set('Asia/Bangkok');
+$time = date("Y-m-d H:i:s");
+$sql = "INSERT INTO account (`ccspent`,`ccbalance`,`price`,`moneybalance`,`id_com`,`time`,`status`)
                         VALUES('$cc','$currentcc','$price','$currentmoney','$id_com','$time',$status)";
-    $conn->exec($sql);
-    $_SESSION["ccbalance"] = $currentcc;
-    $_SESSION["moneybalance"] = $currentmoney;
-    $conn = null;
-    header("location:../homepage/home.php");
-    die();
+$conn->exec($sql);
+$_SESSION["ccbalance"] = $currentcc;
+$_SESSION["moneybalance"] = $currentmoney;
+$conn = null;
+header("location:addcc_pro.php");
+die();
 
 ?>

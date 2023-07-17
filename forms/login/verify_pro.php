@@ -28,6 +28,7 @@ if ($result->rowCount() == 1) {
     $_SESSION["Phone"] = $data["Phone"];
     $_SESSION["Detail_Company"] = $data["Detail_Company"];
     $_SESSION["time"] = $data["time"];
+
     $_SESSION["id"] = session_id();
 
     $dataacc = $result_acc->fetch(PDO::FETCH_ASSOC);

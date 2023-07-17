@@ -133,7 +133,7 @@ session_start();
                         <form class="formrun" action="sell_pro.php" method="get" data-formrun-alert-dialog>
                             <div class="form-group" data-formrun-class-if-success="has-success" data-formrun-class-if-error="has-danger" data-formrun-target="cc">
                                 <label class="form-control-label" >การขาย CC</label>
-                                <input type="number" min="0"class="form-control" name="CC" placeholder="เหลือ <?php echo $_SESSION["ccbalance"]; ?> RetailCC" 
+                                <input type="number" min="0" max="<?php echo $_SESSION["ccbalance"]; ?>" class="form-control" name="CC" placeholder="เหลือ <?php echo $_SESSION["ccbalance"]; ?> RetailCC" 
                                 data-formrun-required data-formrun-class-if-success="form-control-success" 
                                 data-formrun-class-if-error="form-control-danger"
                                 onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))">
@@ -153,16 +153,6 @@ session_start();
                             </div>
                         </form>
                     </div>
-                    <!-- <form action="sell_pro.php" method="GET">
-                        <label style="margin-top: 2%;">การขายCC</label>
-                        <input type="text" name="CC" placeholder="เหลือ <?php echo $_SESSION["ccbalance"]; ?> RetailCC" class="formbold-form-input" required />
-                        <label style="margin-top: 2%;">ราคา</label>
-                        <input type="text" name="price" placeholder="ราคา สมมติ" class="formbold-form-input" required />
-                        <button class="btn-learn-more" type="submit" style="margin-top: 2%;">
-                            ตกลง
-                        </button>
-                    </form> -->
-
                 </div>
             </div>
         </div>
