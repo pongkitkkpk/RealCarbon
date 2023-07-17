@@ -151,32 +151,18 @@ session_start();
         </div>
     </section><!-- End Services Section -->
 
-    <!-- ======= Contact2 Section ======= -->
+    <!-- ======= Contact Section ======= -->
     <section id="contact2" class="contact2">
         <div class="container">
 
             <div class="section-title">
-                <h2>คณะผู้จัดทำ</h2>
-                <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-                    consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
-                    in iste officiis commodi quidem hic quas.</p>
-            </div>
-
-        </div>
-    </section><!-- End Contact2 Section -->
-
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
-        <div class="container">
-
-            <div class="section-title">
-                <h2>ผู้สนับสนุนหลัก</h2>
-                <p>ขอขอบคุณผู้สนับสนุนทุกท่านที่ร่วมกันสนับสนุนให้มีโครงการที่ดีเช่นนี้เกิดขึ้นนะครับ/ค่ะ</p>
+                <h2>คณะผู้จัดการประกวดและผู้สนับสนุนหลัก</h2>
+                <p>ขอขอบคุณคณะผู้จัดการประกวดและผู้สนับสนุนทุกท่านที่ร่วมกันสนับสนุนให้มีโครงการที่ดีเช่นนี้เกิดขึ้นนะครับ/ค่ะ</p>
                 <p>&nbsp;</p>
                 <div class="row" style="text-align: center; vertical-align:middle; padding: 35px;">
                     <div class="col-xs-12 col-md-3" style="padding: 5px">
                         <div class="element">
-                            <img style="position: relative;  top: 50%;  transform: translateY(-50%); width: 150px;
+                            <img style="position: relative;  top: 50%;  transform: translateY(-50%); width: 180px;
                             height: 70px;" src="img/EXIMLogo.png" alt="Loading.."></img>
                         </div>
                     </div>

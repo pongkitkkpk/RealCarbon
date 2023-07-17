@@ -605,7 +605,7 @@ section {
 # About Us
 --------------------------------------------------------------*/
 .about {
-  background-color: rgba(229,237,228);
+  background-color: #fff;
 }
 
 .about .content h3 {
@@ -681,13 +681,17 @@ section {
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
+.services {
+  background-color: rgba(229,237,228);
+}
+
 .services .icon-box {
   padding: 60px 30px;
   transition: all ease-in-out 0.3s;
   background: #fefefe;
   box-shadow: 0px 5px 90px 0px rgba(110, 123, 131, 0.1);
   border-radius: 18px;
-  border-bottom: 5px solid #fff;
+  border-bottom: 5px solid rgba(229,237,228);
 }
 
 .services .color1 {
@@ -696,19 +700,6 @@ section {
 
 .services .color2 {
   background-color: rgba(181,181,66,0.8);
-}
-
-.services .icon-box .icon {
-  width: 64px;
-  height: 64px;
-  background: rgba(190, 189, 120, 0.8);
-  border-radius: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-  transition: ease-in-out 0.3s;
-  color: #fff;
 }
 
 .services .icon-box .icon {
@@ -1340,7 +1331,7 @@ section {
 # Contact2
 --------------------------------------------------------------*/
 .contact2 {
-background-color: rgba(229,237,228);
+background-color: #fff;
 }
 
 /*--------------------------------------------------------------
