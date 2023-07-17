@@ -107,7 +107,7 @@ session_start();
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
                     <div class="icon-box color2">
                         <div class="icon"><i class="bi bi-bag"></i></div>
-                        <h4><a id="green" href="">การซื้อคาร์บอนเครดิต</a></h4>
+                        <h4><a id="green" href="../sell/sellpage.php">การซื้อคาร์บอนเครดิต</a></h4>
                         <p>พื้นที่สำหรับลูกค้าที่สนใจและต้องการรายละเอียดสำหรับการซื้อคาร์บอนเครดิต</p>
                     </div>
                 </div>
@@ -123,7 +123,7 @@ session_start();
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
                     <div class="icon-box color2">
                         <div class="icon"><i class="bi bi-clock-history"></i></div>
-                        <h4><a id="green" href="">ประวัติการซื้อของบริษัท</a></h4>
+                        <h4><a id="green" href="../history/historypage.php">ประวัติการซื้อของบริษัท</a></h4>
                         <p>ท่านสามารถเข้าดูประวัติการซื้อของท่านภายในเว็บไซต์นี้เพียงกดตรงนี้ได้เลย!</p>
                     </div>
                 </div>

@@ -20,7 +20,7 @@
                                 <ul>
                                     <li class="dropdown"><a href="#"><span>ตลาดคาร์บอนเครดิต</span> <i class="bi bi-chevron-right"></i></a>
                                         <ul>
-                                            <li><a href="#">การซื้อคาร์บอนเครดิต</a></li>
+                                            <li><a href="../sell/sellpage.php">การซื้อคาร์บอนเครดิต</a></li>
                                             <li aria-disabled="true"><a href="#">การขายคาร์บอนเครดิต</a></li>
                                         </ul>
                                     </li>
@@ -94,19 +94,19 @@
                                 <ul>
                                     <li class="dropdown"><a href="#"><span>ตลาดคาร์บอนเครดิต</span> <i class="bi bi-chevron-right"></i></a>
                                         <ul>
-                                            <li><a href="#">การซื้อคาร์บอนเครดิต</a></li>
+                                            <li><a href="../sell/sellpage.php">การซื้อคาร์บอนเครดิต</a></li>
                                             <li><a href="#">การขายคาร์บอนเครดิต</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="#">ประวัติการซื้อของบริษัท</a></li>
+                                    <li><a href="../history/historypage.php">ประวัติการซื้อของบริษัท</a></li>
                                     <li><a href="#">คำนวนคาร์บอนเครดิต</a></li>
                                     <li><a href="#">ข้อมูลส่วนตัวของบริษัท</a></li>
                                 </ul>
                             </li>
                             <li><a class="nav-link scrollto" href="#contact2">คณะผู้จัดการประกวดและผู้สนับสนุนหลัก</a></li>
                         <i class="bi bi-list mobile-nav-toggle"></i>
-                        <li><a class="nav-link scrollto" href="../sell/sellpage.php">test sell</a></li>
-                        <li><a class="nav-link scrollto" href="../history/historypage.php">test history</a></li>
+                        <!-- <li><a class="nav-link scrollto" href="../sell/sellpage.php">test sell</a></li> -->
+                        <!-- <li><a class="nav-link scrollto" href="../history/historypage.php">test history</a></li> -->
                         </ul>
                         <i class="bi bi-list mobile-nav-toggle"></i>
                     </nav><!-- .navbar -->
