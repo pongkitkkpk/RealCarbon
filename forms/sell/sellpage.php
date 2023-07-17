@@ -1,5 +1,9 @@
 <?php
 session_start();
+if (!isset($_SESSION["add_login"])) {
+    header("location:../login/login_page.php");
+    die();
+}
 ?>
 
 <!DOCTYPE html>

@@ -1,10 +1,9 @@
 <?php
 session_start();
-// if (!isset($_SESSION["Email"])) {
-//     header("location:tableCC.php");
-//     die();
-// }else {
-// }
+if (!isset($_SESSION["id"])) {
+    header("location:../login/login_page.php");
+    die();
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -24,7 +24,7 @@
                                             <li aria-disabled="true"><a href="#">การขายคาร์บอนเครดิต</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="#">ประวัติการซื้อของบริษัท</a></li>
+                                    <li><a href="../history/historypage.php">ประวัติการซื้อของบริษัท</a></li>
                                     <li><a href="#">คำนวนคาร์บอนเครดิต</a></li>
                                     <li><a href="#">ข้อมูลส่วนตัวของบริษัท</a></li>
                                 </ul>

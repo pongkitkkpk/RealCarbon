@@ -27,7 +27,7 @@ $sql = "SELECT * FROM member WHERE Email = '$email'";
 //แสดงผลข้อมูลในตาราง
 $result = $connection->query($sql); 
 if ($result->rowCount() == 1) {
-    $_SESSION["add_login"] = "error";
+    $_SESSION["add_login"] = "haveemail";
 
 } else {
     //ปรับเป็น ไทม์โซน ไทย
