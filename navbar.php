@@ -85,36 +85,29 @@
 
                     <nav id="navbar" class="navbar order-last order-lg-0">
                         <ul>
-                            <li><a class="nav-link scrollto active" href="#hero">หน้าหลัก</a></li>
-                            <li><a class="nav-link scrollto" href="#about">เกี่ยวกับเรา</a></li>
+                            <li><a class="nav-link scrollto active" href="../homepage/home.php">หน้าหลัก</a></li>
+                            <li><a class="nav-link scrollto" href="../homepage/home.php#about">เกี่ยวกับเรา</a></li>
                             <!-- <li><a class="nav-link scrollto" href="#services">บริการของเรา</a></li> -->
                             <!-- <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
                             <li><a class="nav-link scrollto" href="#pricing">Pricing</a></li> -->
-                            <li class="dropdown"><a href="#services"><span>บริการของเรา</span> <i class="bi bi-chevron-down"></i></a>
+                            <li class="dropdown"><a href="../homepage/home.php#services"><span>บริการของเรา</span> <i class="bi bi-chevron-down"></i></a>
                                 <ul>
                                     <li class="dropdown"><a href="#"><span>ตลาดคาร์บอนเครดิต</span> <i class="bi bi-chevron-right"></i></a>
                                         <ul>
-                                            <li><a href="../sell/sellpage.php">การซื้อคาร์บอนเครดิต</a></li>
+                                            <li><a href="../sell/sellpage.php#about">การซื้อคาร์บอนเครดิต</a></li>
                                             <li><a href="#">การขายคาร์บอนเครดิต</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="../history/historypage.php">ประวัติการซื้อของบริษัท</a></li>
+                                    <li><a href="../history/historypage.php#faq">ประวัติการซื้อของบริษัท</a></li>
                                     <li><a href="#">คำนวนคาร์บอนเครดิต</a></li>
                                     <li><a href="#">ข้อมูลส่วนตัวของบริษัท</a></li>
                                 </ul>
                             </li>
-                            <li><a class="nav-link scrollto" href="#contact2">คณะผู้จัดการประกวดและผู้สนับสนุนหลัก</a></li>
-                        <i class="bi bi-list mobile-nav-toggle"></i>
-                        <!-- <li><a class="nav-link scrollto" href="../sell/sellpage.php">test sell</a></li> -->
-                        <!-- <li><a class="nav-link scrollto" href="../history/historypage.php">test history</a></li> -->
+                            <li><a class="nav-link scrollto" href="../homepage/home.php#contact2">คณะผู้จัดการประกวดและผู้สนับสนุนหลัก</a></li>
                         </ul>
                         <i class="bi bi-list mobile-nav-toggle"></i>
                     </nav><!-- .navbar -->
-                    <a href="#about" class="get-started-btn scrollto">Get Started</a>
-                    <a href="#" class="notification">
-                        <span><i class="bi bi-bell " style="font-size: 20px"></i></span>
-                        <span class="badge">3</span>
-                    </a>
+                    
                     <a href="../login/logout_pro.php" class="get-started-btn scrollto">logout</a>
                 </div>
             </div>

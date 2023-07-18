@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (!isset($_SESSION["add_login"])) {
+if (!isset($_SESSION["id"])) {
     header("location:../login/login_page.php");
     die();
 }

@@ -16,11 +16,13 @@ if (!isset($_SESSION["id"])) {
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <!-- <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
+    <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet" <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pridi:wght@300&display=swap" rel="stylesheet">
 
     <!-- Vendor CSS Files -->
 
@@ -54,7 +56,7 @@ if (!isset($_SESSION["id"])) {
     </section><!-- End Hero -->
 
 
-    <div class="container fluid">
+    <div class="container fluid content">
 
         <br>
         <section id="faq" class="faq">
@@ -117,40 +119,40 @@ if (!isset($_SESSION["id"])) {
                                 echo "</div>";
 
                                 echo "<div class=\"card-body\">";
- 
+
 
                                 echo "<div class=\"container\">";
 
-                                echo"<div class=\"row align-items-start\">";
+                                echo "<div class=\"row align-items-start\">";
                                 echo "<div class=\"col\"></div>";
                                 echo "<div class=\"col\">";
-                                echo"</div>";
+                                echo "</div>";
                                 echo "<div class=\"col\"></div>";
-                                echo"</div>";
+                                echo "</div>";
 
-                                echo"<div class=\"row align-items-center\">";
+                                echo "<div class=\"row align-items-center\">";
                                 echo "<div class=\"col\">";
-                                echo"<p class=\"card-text\" style=\"margin-bottom:0.25%;\"><i class=\"bi bi-cash-stack\"></i>ปริมาณการซืื้อ cc " . $row['1'] . " Retailcc<br></p>";
+                                echo "<p class=\"card-text\" style=\"margin-bottom:0.25%;\"><i class=\"bi bi-cash-stack\"></i>ปริมาณการซืื้อ cc " . $row['1'] . " Retailcc<br></p>";
                                 echo "<p class=\"card-text\" style=\"margin-bottom:0.25%;\"><i class=\"bi bi-cash-stack\"></i>  ราคา " . $row['2'] . " Retailcc<br></p>";
-                                echo"</div>";
+                                echo "</div>";
                                 echo "<div class=\"col\"></div>";
                                 echo "<div class=\"col\"></div>";
-                                echo"</div>";
-                                
-                                echo"<div class=\"row align-items-end\">";
-                                
+                                echo "</div>";
+
+                                echo "<div class=\"row align-items-end\">";
+
                                 echo "<div class=\"col\"></div>";
                                 echo "<div class=\"col\"></div>";
                                 echo "<div class=\"col\">";
                                 echo "<a href=\"#\" class=\"btn-learn-more\">Learn More</a>";
-                                echo"</div>";
-                                echo"</div>";
+                                echo "</div>";
+                                echo "</div>";
 
 
 
 
                                 // echo "<p class=\"card-text\" style=\"margin-bottom:0.25%;\">  <br></p>";
-                               
+
 
                                 echo "</td></tr>";
                             }
@@ -163,7 +165,15 @@ if (!isset($_SESSION["id"])) {
             </div>
     </div>
     </section>
+    <!-- Vendor JS Files -->
+    <script src="../../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="../../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="../../assets/vendor/php-email-form/validate.js"></script>
 
+    <!-- Template Main JS File -->
+    <script src="../../assets/js/main.js"></script>
 
 
 
