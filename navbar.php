@@ -18,7 +18,7 @@
                             <li><a class="nav-link scrollto" href="#pricing">Pricing</a></li> -->
                             <li class="dropdown"><a href="#services"><span>บริการของเรา</span> <i class="bi bi-chevron-down"></i></a>
                                 <ul>
-                                    <li class="dropdown"><a href="#"><span>ตลาดคาร์บอนเครดิต</span> <i class="bi bi-chevron-right"></i></a>
+                                    <li class="dropdown"><a href="#services"><span>ตลาดคาร์บอนเครดิต</span> <i class="bi bi-chevron-right"></i></a>
                                         <ul>
                                             <li><a href="../sell/sellpage.php">การซื้อคาร์บอนเครดิต</a></li>
                                             <li aria-disabled="true"><a href="#">การขายคาร์บอนเครดิต</a></li>
