@@ -10,7 +10,6 @@ if (!isset($_SESSION["id"])) {
 $cc = $_GET['CC'];
 $_SESSION["cc"]=$cc;
 $price = $_GET['price'];
-
 $id_com = $_SESSION["ID_Company"];
 
 $oldcc = $_SESSION["ccbalance"];

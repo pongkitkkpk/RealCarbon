@@ -17,7 +17,7 @@ if (!isset($_SESSION["id"])) {
 
     <!-- Favicons -->
     <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet" <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -84,6 +84,7 @@ if (!isset($_SESSION["id"])) {
                               FROM account a , member m 
                               WHERE a.id_com=$id_com and m.ID_Company=a.id_com
                               ORDER BY a.ID_transection ;");
+                              
                         if ($data !== false) {
                             while ($row = $data->fetch()) {
                                 echo "<tr data-bs-toggle=\"collapse\" data-bs-target=\"#r" . $row['0'] . "\"><th>";
@@ -124,27 +125,22 @@ if (!isset($_SESSION["id"])) {
                                 echo "<div class=\"container\">";
 
                                 echo "<div class=\"row align-items-start\">";
-                                echo "<div class=\"col\"></div>";
                                 echo "<div class=\"col\">";
-                                echo "</div>";
-                                echo "<div class=\"col\"></div>";
-                                echo "</div>";
-
-                                echo "<div class=\"row align-items-center\">";
-                                echo "<div class=\"col\">";
-                                echo "<p class=\"card-text\" style=\"margin-bottom:0.25%;\"><i class=\"bi bi-cash-stack\"></i>ปริมาณการซืื้อ cc " . $row['1'] . " Retailcc<br></p>";
+                                echo "<p class=\"card-text\" style=\"margin-bottom:0.25%;\"><i class=\"bi bi-cash-stack\"></i> ปริมาณการซืื้อ cc " . $row['1'] . " Retailcc<br></p>";
                                 echo "<p class=\"card-text\" style=\"margin-bottom:0.25%;\"><i class=\"bi bi-cash-stack\"></i>  ราคา " . $row['2'] . " Retailcc<br></p>";
                                 echo "</div>";
                                 echo "<div class=\"col\"></div>";
                                 echo "<div class=\"col\"></div>";
-                                echo "</div>";
+                                
+
 
                                 echo "<div class=\"row align-items-end\">";
 
                                 echo "<div class=\"col\"></div>";
                                 echo "<div class=\"col\"></div>";
                                 echo "<div class=\"col\">";
-                                echo "<a href=\"#\" class=\"btn-learn-more\">Learn More</a>";
+                                echo "<a href=\"create_cerfiticate.php\?idtran=".$row['0']."\"  class=\"btn-learn-more\">Learn More</a>";
+                                echo "</div>";
                                 echo "</div>";
                                 echo "</div>";
 
