@@ -139,7 +139,7 @@ if (!isset($_SESSION["id"])) {
                                 echo "<div class=\"col\"></div>";
                                 echo "<div class=\"col\"></div>";
                                 echo "<div class=\"col\">";
-                                echo "<a href=\"create_cerfiticate.php\?idtran=".$row['0']."\"  class=\"btn-learn-more\">Learn More</a>";
+                                echo "<a href=\"create_cerfiticate.php\?idtran=".$row['0']."\"  class=\"btn-learn-more\" download>Download Certificate</a>";
                                 echo "</div>";
                                 echo "</div>";
                                 echo "</div>";
