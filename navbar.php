@@ -30,11 +30,11 @@
                                 </ul>
                             </li>
                             <li><a class="nav-link scrollto" href="#contact2">คณะผู้จัดการประกวดและผู้สนับสนุนหลัก</a></li>
+                            <!-- <li><a class="nav-link scrollto" href="../login/login_page.php">ลงชื่อเช้า / สมัครสมาชิก</a></li> -->
                         </ul>
                         <i class="bi bi-list mobile-nav-toggle"></i>
                     </nav>
-                    <a href=""></a>
-                    <a class="get-started-btn scrollto" href="../login/login_page.php"><i class="bi bi-person-circle"></i> ลงชื่อเช้า / สมัครสมาชิก</a>
+                    <a class="get-started-btn scrollto" href="../login/login_page.php"><i class="bi bi-person-circle"></i> เข้าสู่ระบบ</a>
 
 
                 </div>
@@ -104,11 +104,13 @@
                                 </ul>
                             </li>
                             <li><a class="nav-link scrollto" href="../homepage/home.php#contact2">คณะผู้จัดการประกวดและผู้สนับสนุนหลัก</a></li>
+                            <li><a class="nav-link scrollto" href="../login/logout_pro.php">ออกจากระบบ</a></li>
                         </ul>
                         <i class="bi bi-list mobile-nav-toggle"></i>
                     </nav><!-- .navbar -->
                     
-                    <a href="../login/logout_pro.php" class="get-started-btn scrollto">logout</a>
+                    <a href="#" class="get-started-btn scrollto"><i class="bi bi-person-lines-fill"></i>   <?php echo $_SESSION["Name_Company"];?></a>
+                    <!-- <a href="../login/logout_pro.php" class="get-started-btn scrollto">logout</a> -->
                 </div>
             </div>
 
