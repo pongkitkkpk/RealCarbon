@@ -7,9 +7,10 @@ if (!isset($_SESSION["id"])) {
 ?>
 
 <?php
+$peronecc=500;
 $cc = $_GET['CC'];
 $_SESSION["cc"]=$cc;
-$price = $_GET['price'];
+$price = $cc*$peronecc;
 $id_com = $_SESSION["ID_Company"];
 
 $oldcc = $_SESSION["ccbalance"];

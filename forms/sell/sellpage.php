@@ -31,7 +31,7 @@ if (!isset($_SESSION["id"])) {
     <link href="../../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
     <link href="../../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 
-    <!-- Template Main CSS File --> 
+    <!-- Template Main CSS File -->
     <link href="../../assets/css/style.css" rel="stylesheet">
 
 </head>
@@ -44,7 +44,7 @@ if (!isset($_SESSION["id"])) {
             <div class="row justify-content-center">
                 <div class="col-xl-8">
                     <h1>ขาย RetaillCC หน้านี้คร้าบบบ </h1>
-                    <h1>ตอนนี้คุณมี <?php echo $_SESSION["oldhavecc"]?> Retailcc</h1>
+                    <h1>ตอนนี้คุณมี <?php echo $_SESSION["oldhavecc"] ?> Retailcc</h1>
                     <h2>ตอนนี้มี Retaill Carbon Credit เหลือ <?php echo $_SESSION["ccbalance"]; ?> Retail CC แล้ว</h2>
 
                 </div>
@@ -64,21 +64,20 @@ if (!isset($_SESSION["id"])) {
                     <div class="card-block">
                         <form class="formrun" action="sell_pro.php" method="get" data-formrun-alert-dialog>
                             <div class="form-group" data-formrun-class-if-success="has-success" data-formrun-class-if-error="has-danger" data-formrun-target="cc">
-                                <label class="form-control-label" >การขาย CC</label>
-                                <input type="number" min="0" max="<?php echo $_SESSION["ccbalance"]; ?>" class="form-control" name="CC" placeholder="เหลือ <?php echo $_SESSION["ccbalance"]; ?> RetailCC" 
-                                data-formrun-required data-formrun-class-if-success="form-control-success" 
-                                data-formrun-class-if-error="form-control-danger"
-                                onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))">
+                                <label class="form-control-label">การขาย CC</label>
+                                <input type="number" id="needcc" onkeyup="changeprice()" min="0" max="<?php echo $_SESSION["ccbalance"]; ?>" class="form-control" name="CC" placeholder="เหลือ <?php echo $_SESSION["ccbalance"]; ?> RetailCC" data-formrun-required data-formrun-class-if-success="form-control-success" data-formrun-class-if-error="form-control-danger" onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))">
                                 <div class="text-danger" data-formrun-show-if-error="CC">กรุณาใส่จำนวน retailCC ที่จะซื้อ</div>
                             </div>
                             <div class="form-group" data-formrun-class-if-success="has-success" data-formrun-class-if-error="has-danger" data-formrun-target="price">
-                                <label class="form-control-label">ราคา</label>
+                                <!-- <label class="form-control-label">ราคา</label>
                                 <input type="number"  min="0"class="form-control" name="price" placeholder="ราคา สมมติ" 
                                 data-formrun-required data-formrun-class-if-success="form-control-success" 
                                 data-formrun-class-if-error="form-control-danger"
                                 onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))">
-                                <div class="text-danger" data-formrun-show-if-error="price">กรุณาใส่ราคาที่จะซื้อ</div>
+                                <div class="text-danger" data-formrun-show-if-error="price">กรุณาใส่ราคาที่จะซื้อ</div> -->
+                               
                             </div>
+                            <p>ราคาเท่ากับ: <span id="pricetotal"></span></p>
                             <br>
                             <div>
                                 <button type="submit" class="btn-learn-more" data-formrun-error-text="ซื้อไม่ได้">ตกลงซื้อ</button>
@@ -109,3 +108,11 @@ if (!isset($_SESSION["id"])) {
 </body>
 
 </html>
+
+<script>
+    function changeprice() {
+        var x = document.getElementById("needcc").value;
+        x=x*500;
+        document.getElementById("pricetotal").innerHTML = x;
+    }
+</script>
