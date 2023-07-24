@@ -61,7 +61,7 @@ if (!isset($_SESSION["id"])) {
                 <div class="row content">
                     <h2>ขาย carbon ค้าบบ</h2>
 
-                    <div class="card-block">
+                    <div class="card-block" >
                         <form class="formrun" action="sell_pro.php" method="get" data-formrun-alert-dialog>
                             <div class="form-group" data-formrun-class-if-success="has-success" data-formrun-class-if-error="has-danger" data-formrun-target="cc">
                                 <label class="form-control-label">การขาย CC</label>
@@ -77,7 +77,8 @@ if (!isset($_SESSION["id"])) {
                                 <div class="text-danger" data-formrun-show-if-error="price">กรุณาใส่ราคาที่จะซื้อ</div> -->
                                
                             </div>
-                            <p>ราคาเท่ากับ: <span id="pricetotal"></span></p>
+                            <p> เรท 1 Retailcc = 500 บาท</p>
+                            <p>ราคาเท่ากับ: <span id="pricetotal"> บาท</p>
                             <br>
                             <div>
                                 <button type="submit" class="btn-learn-more" data-formrun-error-text="ซื้อไม่ได้">ตกลงซื้อ</button>
