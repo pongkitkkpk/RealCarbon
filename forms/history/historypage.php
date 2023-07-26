@@ -56,6 +56,7 @@ if (!isset($_SESSION["id"])) {
     </section><!-- End Hero -->
 
 
+    
     <div class="container fluid content">
 
         <br>
@@ -64,13 +65,13 @@ if (!isset($_SESSION["id"])) {
                 <table class="table table table-hover align-cc mb-0 ">
                     <thead>
                         <tr>
-                            <th>Transection number</th>
+                            <th style="width:10%">รหัสจัดซื้อ</th>
                             <!-- <th>&nbsp;</th> -->
-                            <th>Namecompany</th>
-                            <th>Status</th>
-                            <th>price</th>
-                            <th>totleCC</th>
-                            <th>time</th>
+                            <th>ชื่อบริษัท</th>
+                            <th >สถานะ</th>
+                            <th>ราคาที่ซื้อ</th>
+                            <th >จำนวน Retailcc ที่ซื้อ</th>
+                            <th>เวลา</th>
                         </tr>
                     </thead>
                     <tbody class="content">
@@ -93,20 +94,20 @@ if (!isset($_SESSION["id"])) {
                                 echo  $row['7'];
                                 echo "</td>";
                                 if ($row['5'] == 1) {
-                                    echo "<td class=\"status center\"><span class=\"activebuy\">Buy</span></td>";
+                                    echo "<td class=\"status center\"><span class=\"activebuy\"> ซื้อ</span></td>";
                                 } else if ($row['5'] == 2) {
-                                    echo "<td class=\"status center\"><span class=\"activesell\">Sell</span></td>";
+                                    echo "<td class=\"status center\"><span class=\"activesell\"> ขาย</span></td>";
                                 } else {
                                     echo "<td class=\"status center\"><span class=\"waiting\">wantted</span></td>";
                                 }
-                                echo "<td class=\"center \">";
+                                echo "<td class=\"center\">";
                                 echo  $row['2'];
-                                echo "</td><td class=\"center \">";
+                                echo "</td><td class=\"center\">";
                                 echo $row['1'];
-                                echo "</td><td class=\"center \"> " . $row['4'] . "</td>";
+                                echo "</td><td class=\"center\"> " . $row['4'] . "</td>";
                                 echo "</tr>";
                                 echo "<tr><td colspan=\"6\">";
-                                echo "<div class=\"collapse \" id=\"r" . $row['0'] . "\" data-bs-parent=\".table\" data-toggle=\"collapse\">";
+                                echo "<div class=\"collapse\" id=\"r" . $row['0'] . "\" data-bs-parent=\".table\" data-toggle=\"collapse\">";
 
                                 echo "<div class=\"card \">";
                                 if ($row['5'] == 1) {
@@ -117,29 +118,52 @@ if (!isset($_SESSION["id"])) {
                                     echo "<div class=\"card-header center\" style=\"color: #cfa00c;\">";
                                 }
                                 echo "Transection number  " . $row['0'] . "";
-                                echo "</div>";
+                                echo "</div>";  
+                                
 
-                                echo "<div class=\"card-body\">";
+                                echo "<div class=\"card-bodycard\" >";
+                                echo "<div class=\"container has-bg-img\"   style=\"background-image: url(../history/image/green_carbon.jpg);   background-size: 100% 100%; \"       >";
+                                
+                                
+                                echo "<div class=\"row align-items-start\" >";
+                                
+                                echo "<div class=\"col\"></div>";
+                                echo "<div class=\"col\"></div>";
+                                echo "<div class=\"col\"></div>";
+                                
+                                echo "<br>";
+                                echo "<br>";
+                                echo "<br>";
+                                echo "<br>";
+                                echo "<br>";
 
-
-                                echo "<div class=\"container\">";
-
-                                echo "<div class=\"row align-items-start\">";
+                                echo "<div class=\"row align-items-center\">";
+                                echo "<div class=\"col\"></div>";
                                 echo "<div class=\"col\">";
                                 echo "<p class=\"card-text\" style=\"margin-bottom:0.25%;\"><i class=\"bi bi-cash-stack\"></i> ปริมาณการซืื้อ cc " . $row['1'] . " Retailcc<br></p>";
                                 echo "<p class=\"card-text\" style=\"margin-bottom:0.25%;\"><i class=\"bi bi-cash-stack\"></i>  ราคา " . $row['2'] . " Retailcc<br></p>";
                                 echo "</div>";
-                                echo "<div class=\"col\"></div>";
-                                echo "<div class=\"col\"></div>";
-                                
-
-
-                                echo "<div class=\"row align-items-end\">";
-
-                                echo "<div class=\"col\"></div>";
-                                echo "<div class=\"col\"></div>";
                                 echo "<div class=\"col\">";
                                 echo "<a href=\"create_cerfiticate.php\?idtran=".$row['0']."\"  class=\"btn-learn-more\" download>Download Certificate</a>";
+                                echo "</div>";
+                                echo "</div>";
+                                
+                                echo "<br>";
+                                echo "<br>";
+                                echo "<br>";
+                                echo "<br>";
+                                echo "<br>";
+
+                                echo "<div class=\"row align-items-end\">";
+                                echo "<div class=\"col\"></div>";
+                                echo "<div class=\"col\"></div>";
+                                echo "<div class=\"col\"></div>";
+                                echo "</div>";
+                                
+                                // echo "<div class=\"col\">";
+                                // echo "<a href=\"create_cerfiticate.php\?idtran=".$row['0']."\"  class=\"btn-learn-more\" download>Download Certificate</a>";
+                                // echo "</div>";
+                                
                                 echo "</div>";
                                 echo "</div>";
                                 echo "</div>";
