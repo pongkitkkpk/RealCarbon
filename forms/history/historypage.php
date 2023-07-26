@@ -68,9 +68,9 @@ if (!isset($_SESSION["id"])) {
                             <th style="width:10%">รหัสจัดซื้อ</th>
                             <!-- <th>&nbsp;</th> -->
                             <th>ชื่อบริษัท</th>
-                            <th style="width:25%">สถานะ</th>
+                            <th >สถานะ</th>
                             <th>ราคาที่ซื้อ</th>
-                            <th style="width:25%">จำนวน Retailcc ที่ซื้อ</th>
+                            <th >จำนวน Retailcc ที่ซื้อ</th>
                             <th>เวลา</th>
                         </tr>
                     </thead>
