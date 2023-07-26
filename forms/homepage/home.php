@@ -52,30 +52,23 @@ session_start();
         <div class="container">
             <div class="section-title">
                 <h2>เกี่ยวกับเรา</h2>
-                <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-                    consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
-                    in iste officiis commodi quidem hic quas.</p>
+                <p>Carbonx เป็นแพลตฟอร์มที่พัฒนาขึ้นเพื่อเป็นตัวกลางสำหรับขายคาร์บอนเครดิต
+                    มีวัตถุประสงค์ในการลดการปล่อยก๊าซเรือนกระจกสู่สิ่งแวดล้อม สำหรับผู้คนหรือ
+                    สถานประกอบการที่มีความต้องการที่จะชดเชยคาร์บอนในปริมาณน้อย</p>
             </div>
 
             <div class="row content">
                 <div class="col-lg-6">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore
-                        magna aliqua.
+                    <p align ="justify">
+                        <strong>คาร์บอนเครดิต</strong> คือ สิทธิที่เกิดจากการลดปริมาณการปล่อยก๊าซคาร์บอนไดออกไซด์หรือก๊าซเรือนกระจกสู่สิ่งแวดล้อม
+                        โดยมาจากการที่บุคคลหรือองค์กรได้ดำเนินโครงการหรือมาตรการที่มีเป้าหมายเพื่อลดการปล่อยก๊าซคาร์บอนไดออกไซด์หรือก๊าซเรือนกระจกสู่สิ่งแวดล้อม
+                        ซึ่งสามารถวัดปริมาณและสามารถนำไปซื้อขายในตลาดซื้อขายคาร์บอนเครดิตได้
+                        การซื้อขายคาร์บอนเครดิตนั้นจะช่วยสร้างสมดุลในการปล่อยก๊าซเรือนกระจกไม่ให้ออกมาทำร้ายต่อโลกของเรามากจนเกินไปและยังเป็นการจุดประกายการมีส่วนร่วมของธุรกิจที่ปกติไม่ได้มีส่วนในการปล่อยก๊าซคาร์บอนส่วนเกินมาสู่โลกให้สามารถมีโอกาสทำประโยชน์ได้ ด้วยการนำเครดิตเหลือเหล่านั้นมาขึ้นทะเบียนขายให้กับธุรกิจอื่นที่ปล่อยก๊าซในระดับสูงเกินเกณฑ์และจำเป็นต้องหาเครดิตมาชดเชย
                     </p>
-                    <ul>
-                        <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
-                        <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit</li>
-                        <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
-                    </ul>
                 </div>
                 <div class="col-lg-6 pt-4 pt-lg-0">
-                    <p>
-                        Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate
-                        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                        culpa qui officia deserunt mollit anim id est laborum.
+                    <p align ="justify">
+                    การซื้อขายคาร์บอนเครดิต ที่มีเป้าหมายเพื่อลดการปล่อยก๊าซเรือนกระจก โดยเปิดโอกาสให้คนที่ปล่อยก๊าซในระดับต่ำ ซึ่งทำให้คาร์บอนเครดิตเหลือใช้สามารถนำมาขายให้กับคนที่ปล่อยก๊าซไปแล้วในระดับสูงเพื่อชดเชยปริมาณคาร์บอนที่จะออกมาทำลายชั้นบรรยากาศในภาพรวม ซึ่งเมื่อธุรกิจที่ต้องใช้จ่ายเพิ่มเติมเพื่อซื้อคาร์บอนเครดิต จำเป็นต้องมีต้นทุนในการผลิตเพิ่ม หนทางที่ดีกว่า จึงเป็นการควบคุมปริมาณการปล่อยก๊าซของตัวเองให้ได้
                     </p>
                     <a href="#" class="btn-learn-more">Learn More</a>
                 </div>
@@ -98,9 +91,11 @@ session_start();
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
                     <div class="icon-box color1">
                         <div class="icon"><i class="bi bi-shop"></i></div>
-                        <h4><a id="yellow" href="">ตลาดคาร์บอนเครดิต</a></h4>
+                        <h4><a id="yellow">ตลาดคาร์บอนเครดิต</a></h4>
                         <p>ศูนย์รวมบริษัทในเว็บไซต์ของเราสำหรับลูกค้าที่ต้องการทราบข้อมูลและรายละเอียดต่างๆ
                             เพื่อประกอบการตัดสินใจในการซื้อหรือการขายคาร์บอนเครดิตของท่าน</p>
+                        <br>
+                        <p id="unavailable">------ ยังไม่พร้อมให้บริการ ------</p>
                     </div>
                 </div>
 
@@ -115,8 +110,10 @@ session_start();
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
                     <div class="icon-box color1">
                         <div class="icon"><i class="bi bi-cash-stack"></i></div>
-                        <h4><a id="yellow" href="">การขายคาร์บอนเครดิต</a></h4>
-                        <p>พื้นที่สำหรับลูกค้าที่สนใจและต้องการรายละเอียดสำหรับการขายคาร์บอนเครดิต (ยังไม่พร้อมให้บริการ)</p>
+                        <h4><a id="yellow">การขายคาร์บอนเครดิต</a></h4>
+                        <p>พื้นที่สำหรับลูกค้าที่สนใจและต้องการรายละเอียดสำหรับการขายคาร์บอนเครดิต </p>
+                        <br>
+                        <p id="unavailable">------ ยังไม่พร้อมให้บริการ ------</p>
                     </div>
                 </div>
 
@@ -131,10 +128,12 @@ session_start();
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
                     <div class="icon-box color1">
                         <div class="icon"><i class="bi bi-calculator"></i></div>
-                        <h4><a id="yellow" href="">คำนวนคาร์บอนเครดิต</a></h4>
+                        <h4><a id="yellow">คำนวนคาร์บอนเครดิต</a></h4>
                         <p>การทดลองคำนวนจำนวนของคาร์บอนเครดิตที่ท่านต้องการทำการซื้อขายภายในเว็บไซต์ของเรา
-                            เพื่อประกอบการตัดสินใจในการซื้อหรือการขายคาร์บอนเครดิตของท่าน(ยังไม่พร้อมให้บริการ)
+                            เพื่อประกอบการตัดสินใจในการซื้อหรือการขายคาร์บอนเครดิตของท่าน
                         </p>
+                        <br>
+                        <p id="unavailable">------ ยังไม่พร้อมให้บริการ ------</p>
                     </div>
                 </div>
 
