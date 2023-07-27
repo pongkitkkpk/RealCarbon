@@ -34,7 +34,7 @@ session_start();
 <body>
     <?php include "../../navbar.php" ?>
     <!-- ======= Hero Section ======= -->
-    <section id="hero" class="bg hero d-flex flex-column justify-content-center">
+    <section id="hero" class="d-flex flex-column justify-content-center ">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-xl-8">

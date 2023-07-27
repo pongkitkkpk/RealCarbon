@@ -43,7 +43,7 @@ if (!isset($_SESSION["id"])) {
 <body>
     <?php include "../../navbar.php" ?>
     <!-- ======= Hero Section ======= -->
-    <section id="hero" class="hero d-flex flex-column justify-content-center">
+    <section id="herohis" class="d-flex flex-column justify-content-center">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-xl-8">
@@ -184,7 +184,22 @@ if (!isset($_SESSION["id"])) {
                 </table>
             </div>
     </div>
-    </section>
+    </section><!-- End About Us Section -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="container">
+            <h3>CARBONX</h3>
+            <p>ผลงานการส่งประกวดของกลุ่ม Steve จากนักศึกษามหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ กทม.</p>
+            <div class="social-links">
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+            </div>
+            <div class="copyright">
+                &copy; Copyright <strong><span>2023, Group Steve From KMUTNB</span></strong>. All Rights Reserved
+            </div>
+        </div>
+    </footer><!-- End Footer -->
     <!-- Vendor JS Files -->
     <script src="../../assets/vendor/purecounter/purecounter_vanilla.js"></script>
     <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

@@ -432,17 +432,95 @@ h6 {
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
+
+#herohis{
+  width: 100%;
+  height: 100vh;
+  background-color: #678566;
+  background: url("../../forms/homepage/img/green-bg2.jpg") top center;   
+  background-size: cover;
+  position: relative;
+}
+#herohis:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#herohis .container {
+  padding-top: 72px;
+  position: relative;
+  text-align: center;
+}
+
+#herohis h1 {
+  margin: 0 0 10px 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #fff;
+}
+
+#herohis h2 {
+  color: #eee;
+  margin-bottom: 40px;
+  font-size: 24px;
+}
+/* ****************************** */
+#herosell{
+  width: 100%;
+  height: 100vh;
+  background-color: #678566;
+  background: url("../../forms/homepage/img/green-bg.jpg") top center;   
+  background-size: cover;
+  position: relative;
+}
+#herosell:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#herosell .container {
+  padding-top: 72px;
+  position: relative;
+  text-align: center;
+}
+
+#herosell h1 {
+  margin: 0 0 10px 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #fff;
+}
+
+#herosell h2 {
+  color: #eee;
+  margin-bottom: 40px;
+  font-size: 24px;
+}
+/* ************************************ */
 #hero {
   width: 100%;
   height: 100vh;
   background-color: #678566;
+  background: url("../../forms/homepage/img/green-bg4.jpg") top center;  
   background-size: cover;
   position: relative;
 }
 
 #hero:before {
   content: "";
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.4);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -536,8 +614,15 @@ h6 {
   border-radius: 0;
 }
 
+
 @media (min-width: 1024px) {
   #hero {
+    background-attachment: fixed;
+  }
+  #herosell {
+    background-attachment: fixed;
+  }
+  #herohis {
     background-attachment: fixed;
   }
 }
@@ -549,6 +634,27 @@ h6 {
   }
 
   #hero h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+
+  #herosell h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  #herosell h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+  #herohis h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  #herohis h2 {
     font-size: 18px;
     line-height: 24px;
     margin-bottom: 30px;
