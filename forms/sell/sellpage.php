@@ -57,14 +57,14 @@ if (!isset($_SESSION["id"])) {
     <section id="faq" class="faq">
         <div class="container">
             <div class="card text-center">
-                <div class="card-header">
-                    <h3>ขณะนี้ carbonx มี retailCC พร้อมจำหน่าย <?php echo $_SESSION["ccbalance"]; ?> retailCC</h3>
+                <div class="card-header" id="sellhead">
+                    <h3>ขณะนี้มี retailCC พร้อมจำหน่าย <?php echo $_SESSION["ccbalance"]; ?> retailCC</h3>
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title pt-3" >*** เรทราคาวันนี้ 1 reatailcc = 500 บาท ***</h5>
-                    <p class="card-title py-3">บริษัท <?php echo $_SESSION["Name_Company"]; ?> มี retailCC อยู่ <?php echo $_SESSION["oldhavecc"]; ?> retailCC</ย>
+                    <h5 class="alert alert-light pt-3" >*** เรทราคาวันนี้ 1 reatailcc = 500 บาท ***</h5>
+                    <h1 class="card-title py-3"><u>บริษัท <b><?php echo $_SESSION["Name_Company"]; ?></b> มี retailCC อยู่ <?php echo $_SESSION["oldhavecc"]; ?> retailCC</u></h1>
                     <div class="row content">
-                        <h2>จำนวน retailCC ที่ต้องการซื้อ</h2>
+                        <h5>จำนวน retailCC ที่ต้องการซื้อ</h5>
                         <div class="card-block">
                             <form class="formrun" action="sell_pro.php" method="get" data-formrun-alert-dialog>
                                 <div class="row py-3">
@@ -87,7 +87,7 @@ if (!isset($_SESSION["id"])) {
                                 <p style="display:inline">บาท</p>
                                 <br>
                                 <div class="py-3">
-                                    <button type="submit" class="btn-learn-more " data-formrun-error-text="ซื้อไม่ได้">ตกลงซื้อ</button>
+                                    <button type="submit" class="btn-learn-more" data-formrun-error-text="การตกลงซื้อไม่สำเร็จ">ตกลงซื้อ</button>
                                 </div>
                             </form>
                         </div>
