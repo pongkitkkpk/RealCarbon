@@ -12,7 +12,7 @@ var Formrun = function (e) { function t(r) { if (n[r]) return n[r].exports; var 
 			}
 		}, {
 			key: "someFieldsRequired", get: function () {
-				return { ja: "æœªå…¥åŠ›ã®é …ç›®ãŒã‚ã‚Šã¾ã™", en: "โปรดใส่ข้อมูลให้ครบถ้วน" }[this.lang]
+				return { ja: "æœªå…¥åŠ›ã®é …ç›®ãŒã‚ã‚Šã¾ã™", en: "กรุณาใส่จำนวน Retailcc ด้วยครับ" }[this.lang]
 			}
 		}, {
 			key: "invalidTextLengthField", get: function () {

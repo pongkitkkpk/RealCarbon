@@ -61,76 +61,43 @@ if (!isset($_SESSION["id"])) {
                     <h3>ขณะนี้ carbonx มี retailCC พร้อมจำหน่าย <?php echo $_SESSION["ccbalance"]; ?> retailCC</h3>
                 </div>
                 <div class="card-body">
-                    <p class="card-title">บริษัท <?php echo $_SESSION["Name_Company"]; ?> มี retailCC อยู่ <?php echo $_SESSION["oldhavecc"]; ?> retailCC</ย>
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    
-                    
+                    <h5 class="card-title pt-3" >*** เรทราคาวันนี้ 1 reatailcc = 500 บาท ***</h5>
+                    <p class="card-title py-3">บริษัท <?php echo $_SESSION["Name_Company"]; ?> มี retailCC อยู่ <?php echo $_SESSION["oldhavecc"]; ?> retailCC</ย>
                     <div class="row content">
-
                         <h2>จำนวน retailCC ที่ต้องการซื้อ</h2>
-
                         <div class="card-block">
                             <form class="formrun" action="sell_pro.php" method="get" data-formrun-alert-dialog>
-                                <div class="form-group" data-formrun-class-if-success="has-success" data-formrun-class-if-error="has-danger" data-formrun-target="cc">
+                                <div class="row py-3">
 
-                                    <input type="number" id="needcc" onkeyup="changeprice()" min="0" max="<?php echo $_SESSION["ccbalance"]; ?>" class="form-control" name="CC" placeholder="เหลือ <?php echo $_SESSION["ccbalance"]; ?> RetailCC" data-formrun-required data-formrun-class-if-success="form-control-success" data-formrun-class-if-error="form-control-danger" onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))">
-                                    <div class="text-danger" data-formrun-show-if-error="CC">กรุณาใส่จำนวน retailCC ที่จะซื้อ</div>
-                                </div>
-                                <div class="form-group" data-formrun-class-if-success="has-success" data-formrun-class-if-error="has-danger" data-formrun-target="price">
-                                    <!-- <label class="form-control-label">ราคา</label>
-                                <input type="number"  min="0"class="form-control" name="price" placeholder="ราคา สมมติ" 
-                                data-formrun-required data-formrun-class-if-success="form-control-success" 
-                                data-formrun-class-if-error="form-control-danger"
-                                onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))">
-                                <div class="text-danger" data-formrun-show-if-error="price">กรุณาใส่ราคาที่จะซื้อ</div> -->
+                                    <div class="col-sm"></div>
+                                    <div class="col-sm">
+                                        <div class="form-group" data-formrun-class-if-success="has-success" data-formrun-class-if-error="has-danger" data-formrun-target="cc">
+                                            <input type="number" id="needcc" onkeyup="changeprice()" min="0" max="<?php echo $_SESSION["ccbalance"]; ?>" class="form-control" name="CC" placeholder="เหลือ <?php echo $_SESSION["ccbalance"]; ?> RetailCC" data-formrun-required data-formrun-class-if-success="form-control-success" data-formrun-class-if-error="form-control-danger" onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))">
+                                            <div class="text-danger" data-formrun-show-if-error="CC">กรุณาใส่จำนวน retailCC ที่จะซื้อ</div>
+                                        </div>
+                                        <div class="form-group" data-formrun-class-if-success="has-success" data-formrun-class-if-error="has-danger" data-formrun-target="price">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm"></div>
 
                                 </div>
-                                <p> เรท 1 Retailcc = 500 บาท</p>
-                                <p>ราคาเท่ากับ: <span id="pricetotal"> บาท</p>
+                                <!-- <p> เรท 1 Retailcc = 500 บาท</p> -->
+                                <p style="display:inline">ราคาการสั่งซื้อ </p>
+                                <p style="display:inline"><span id="pricetotal"></p>
+                                <p style="display:inline">บาท</p>
                                 <br>
-                                <div>
-                                    <button type="submit" class="btn-learn-more" data-formrun-error-text="ซื้อไม่ได้">ตกลงซื้อ</button>
+                                <div class="py-3">
+                                    <button type="submit" class="btn-learn-more " data-formrun-error-text="ซื้อไม่ได้">ตกลงซื้อ</button>
                                 </div>
                             </form>
                         </div>
                     </div>
                 </div>
                 <div class="card-footer text-muted">
-                    2 days ago
+                    ราคาอัพเดทเมื่อ 2 วันก่อน
                 </div>
             </div>
-            <div class="section-title">
-
-                <div class="row content">
-                    <h2>ขาย carbon ค้าบบ</h2>
-
-                    <div class="card-block">
-                        <form class="formrun" action="sell_pro.php" method="get" data-formrun-alert-dialog>
-                            <div class="form-group" data-formrun-class-if-success="has-success" data-formrun-class-if-error="has-danger" data-formrun-target="cc">
-                                <label class="form-control-label">การขาย CC</label>
-                                <input type="number" id="needcc" onkeyup="changeprice()" min="0" max="<?php echo $_SESSION["ccbalance"]; ?>" class="form-control" name="CC" placeholder="เหลือ <?php echo $_SESSION["ccbalance"]; ?> RetailCC" data-formrun-required data-formrun-class-if-success="form-control-success" data-formrun-class-if-error="form-control-danger" onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))">
-                                <div class="text-danger" data-formrun-show-if-error="CC">กรุณาใส่จำนวน retailCC ที่จะซื้อ</div>
-                            </div>
-                            <div class="form-group" data-formrun-class-if-success="has-success" data-formrun-class-if-error="has-danger" data-formrun-target="price">
-                                <!-- <label class="form-control-label">ราคา</label>
-                                <input type="number"  min="0"class="form-control" name="price" placeholder="ราคา สมมติ" 
-                                data-formrun-required data-formrun-class-if-success="form-control-success" 
-                                data-formrun-class-if-error="form-control-danger"
-                                onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))">
-                                <div class="text-danger" data-formrun-show-if-error="price">กรุณาใส่ราคาที่จะซื้อ</div> -->
-
-                            </div>
-                            <p> เรท 1 Retailcc = 500 บาท</p>
-                            <p>ราคาเท่ากับ: <span id="pricetotal"> บาท</p>
-                            <br>
-                            <div>
-                                <button type="submit" class="btn-learn-more" data-formrun-error-text="ซื้อไม่ได้">ตกลงซื้อ</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
+            
         </div>
     </section>
     <!-- End About Us Section -->
