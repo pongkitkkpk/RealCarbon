@@ -5,7 +5,7 @@
         <div class="container-fluid">
             <div class="row justify-content-center">
                 <div class="col-xl-9 d-flex align-items-center justify-content-lg-between">
-                    <h1 class="logo me-auto me-lg-0"><a href="templatcopy.php">CARBONX</a></h1>
+                    <h1 class="logo me-auto me-lg-0"><a href="../homepage/home.php">CARBONX</a></h1>
                     <!-- Uncomment below if you prefer to use an image logo -->
                     <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -79,7 +79,7 @@
         <div class="container-fluid">
             <div class="row justify-content-center">
                 <div class="col-xl-9 d-flex align-items-center justify-content-lg-between">
-                    <h1 class="logo me-auto me-lg-0"><a href="templatcopy.php">CARBONX</a></h1>
+                    <h1 class="logo me-auto me-lg-0"><a href="../homepage/home.php">CARBONX</a></h1>
                     <!-- Uncomment below if you prefer to use an image logo -->
                     <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -94,11 +94,11 @@
                                 <ul>
                                     <li class="dropdown"><a href="#"><span>ตลาดคาร์บอนเครดิต</span> <i class="bi bi-chevron-right"></i></a>
                                         <ul>
-                                            <li><a href="../sell/sellpage.php#about">การซื้อคาร์บอนเครดิต</a></li>
+                                            <li><a href="../sell/sellpage.php">การซื้อคาร์บอนเครดิต</a></li>
                                             <li><a href="#">การขายคาร์บอนเครดิต</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="../history/historypage.php#faq">ประวัติการซื้อของบริษัท</a></li>
+                                    <li><a href="../history/historypage.php">ประวัติการซื้อของบริษัท</a></li>
                                     <li><a href="#">คำนวนคาร์บอนเครดิต</a></li>
                                     <li><a href="#">ข้อมูลส่วนตัวของบริษัท</a></li>
                                 </ul>

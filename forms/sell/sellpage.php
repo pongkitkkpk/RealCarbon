@@ -43,9 +43,9 @@ if (!isset($_SESSION["id"])) {
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-xl-8">
-                    <h1>ขาย RetaillCC หน้านี้คร้าบบบ </h1>
-                    <h1>ตอนนี้คุณมี <?php echo $_SESSION["oldhavecc"] ?> Retailcc</h1>
-                    <h2>ตอนนี้มี Retaill Carbon Credit เหลือ <?php echo $_SESSION["ccbalance"]; ?> Retail CC แล้ว</h2>
+                    <h1>ตลาดคาร์บอนเครดิต </h1>
+                    <h1>การซื้อคาร์บอนเครดิต</h1>
+                    <h2 style="font-size : 5vw"> Retaill Carbon Credit พร้อมจำหน่าย <?php echo $_SESSION["ccbalance"]; ?> Retail CC </h2>
 
                 </div>
             </div>
@@ -61,8 +61,8 @@ if (!isset($_SESSION["id"])) {
                     <h3>ขณะนี้ carbonx มี retailCC พร้อมจำหน่าย <?php echo $_SESSION["ccbalance"]; ?> retailCC</h3>
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title pt-3" >*** เรทราคาวันนี้ 1 reatailcc = 500 บาท ***</h5>
-                    <p class="card-title py-3">บริษัท <?php echo $_SESSION["Name_Company"]; ?> มี retailCC อยู่ <?php echo $_SESSION["oldhavecc"]; ?> retailCC</ย>
+                    <h5 class="card-title pt-3" > <b>เรทราคาวันนี้ 1 reatailcc = 500 บาท</b> </h5>
+                    <p class="card-title py-2 pb-1">บริษัท <?php echo $_SESSION["Name_Company"]; ?> มี retailCC อยู่ <?php echo $_SESSION["oldhavecc"]; ?> retailCC</ย>
                     <div class="row content">
                         <h2>จำนวน retailCC ที่ต้องการซื้อ</h2>
                         <div class="card-block">

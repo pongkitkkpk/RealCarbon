@@ -47,9 +47,8 @@ if (!isset($_SESSION["id"])) {
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-xl-8">
-                    <h1>KnightOne - Create Bootstrap Website Template</h1>
-                    <h2>ตอนนี้คุณมี <?php echo $_SESSION["oldhavecc"] ?> Retailcc</h2>
-                    <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox play-btn mb-4"></a>
+                    <h1>ประวัติการซื้อของบริษัท</h1>
+                    <h2>คุณมี <?php echo $_SESSION["oldhavecc"] ?> Retailcc</h2>
                 </div>
             </div>
         </div>
@@ -128,7 +127,11 @@ if (!isset($_SESSION["id"])) {
                                 echo "<div class=\"row align-items-start\" >";
                                 
                                 echo "<div class=\"col\"></div>";
-                                echo "<div class=\"col\"></div>";
+                                echo "<div class=\"col\">";
+                                echo "<p class=\"card-text py-1 pt-5\" style=\"margin-bottom:0.25%;\"> ชื่อบริษํท  " . $row['7'] . " </p>";
+                                echo "<p class=\"card-text py-1\" style=\"margin-bottom:0.25%;\"> ปริมาณการซืื้อ cc " . $row['1'] . " Retailcc</p>";
+                                echo "<p class=\"card-text py-1\" style=\"margin-bottom:0.25%;\">  ราคา " . $row['2'] . " Retailcc</p>";
+                                echo "</div>";
                                 echo "<div class=\"col\"></div>";
                                 
                                 echo "<br>";
@@ -139,10 +142,7 @@ if (!isset($_SESSION["id"])) {
 
                                 echo "<div class=\"row align-items-center\">";
                                 echo "<div class=\"col\"></div>";
-                                echo "<div class=\"col\">";
-                                echo "<p class=\"card-text\" style=\"margin-bottom:0.25%;\"><i class=\"bi bi-cash-stack\"></i> ปริมาณการซืื้อ cc " . $row['1'] . " Retailcc<br></p>";
-                                echo "<p class=\"card-text\" style=\"margin-bottom:0.25%;\"><i class=\"bi bi-cash-stack\"></i>  ราคา " . $row['2'] . " Retailcc<br></p>";
-                                echo "</div>";
+                                echo "<div class=\"col\"></div>";
                                 echo "<div class=\"col\">";
                                 echo "<a href=\"create_cerfiticate.php\?idtran=".$row['0']."\"  class=\"btn-learn-more\" download>Download Certificate</a>";
                                 echo "</div>";
@@ -159,10 +159,7 @@ if (!isset($_SESSION["id"])) {
                                 echo "<div class=\"col\"></div>";
                                 echo "<div class=\"col\"></div>";
                                 echo "</div>";
-                                
-                                // echo "<div class=\"col\">";
-                                // echo "<a href=\"create_cerfiticate.php\?idtran=".$row['0']."\"  class=\"btn-learn-more\" download>Download Certificate</a>";
-                                // echo "</div>";
+                        
                                 
                                 echo "</div>";
                                 echo "</div>";
@@ -200,6 +197,9 @@ if (!isset($_SESSION["id"])) {
             </div>
         </div>
     </footer><!-- End Footer -->
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
     <!-- Vendor JS Files -->
     <script src="../../assets/vendor/purecounter/purecounter_vanilla.js"></script>
     <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
