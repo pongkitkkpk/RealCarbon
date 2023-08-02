@@ -30,6 +30,9 @@ if (!isset($_SESSION["id"])) {
     <link href="../../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
     <link href="../../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
     <link href="../../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    
+    <link rel="preload" as="image" href="../../forms/homepage/img/green-bg6.jpg">
+    <link rel="preload" as="image" href="../history/image/forest_bg.jpg">
 
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"> -->
@@ -59,17 +62,17 @@ if (!isset($_SESSION["id"])) {
     <div class="container fluid content">
 
         <br>
-        <section id="faq" class="faq">
+        <section id="about" class="about">
             <div style="overflow-x:auto;" class="table-responsive">
                 <table class="table table table-hover align-cc mb-0 ">
                     <thead>
                         <tr>
-                            <th style="width:10%">รหัสจัดซื้อ</th>
+                            <th style="width:10%">เลขการจัดซื้อ</th>
                             <!-- <th>&nbsp;</th> -->
                             <th>ชื่อบริษัท</th>
-                            <th >สถานะ</th>
+                            <th>สถานะ</th>
                             <th>ราคาที่ซื้อ</th>
-                            <th >จำนวน Retailcc ที่ซื้อ</th>
+                            <th>จำนวนที่ซื้อ (RetailCC)</th>
                             <th>เวลา</th>
                         </tr>
                     </thead>
@@ -116,23 +119,25 @@ if (!isset($_SESSION["id"])) {
                                 } else {
                                     echo "<div class=\"card-header center\" style=\"color: #cfa00c;\">";
                                 }
-                                echo "Transection number  " . $row['0'] . "";
+                                echo "เลขการจัดซื้อที่ " . $row['0'] . "";
                                 echo "</div>";  
                                 
 
                                 echo "<div class=\"card-bodycard\" >";
-                                echo "<div class=\"container has-bg-img\"   style=\"background-image: url(../history/image/bg.jpg);   background-size: 50% 100%; \"       >";
+                                echo "<div class=\"container has-bg-img \"   style=\"background-image: url(../history/image/forest_bg.jpg);   background-size: 100% 100% ; \"       >";
                                 
                                 
                                 echo "<div class=\"row align-items-start\" >";
                                 
-                                echo "<div class=\"col\"></div>";
+ 
                                 echo "<div class=\"col\">";
-                                echo "<p class=\"card-text py-1 pt-5\" style=\"margin-bottom:0.25%;\"> ชื่อบริษํท  " . $row['7'] . " </p>";
-                                echo "<p class=\"card-text py-1\" style=\"margin-bottom:0.25%;\"> ปริมาณการซืื้อ cc " . $row['1'] . " Retailcc</p>";
-                                echo "<p class=\"card-text py-1\" style=\"margin-bottom:0.25%;\">  ราคา " . $row['2'] . " Retailcc</p>";
+                                echo "<div class=\"card mt-5 mb-3 px-5 pb-4\" id=\"cardinside\" >";
+                                echo "<p class=\"card-text py-1 pt-5 textp\" style=\"margin-bottom:0.25%;\"> ชื่อบริษัท : " . $row['7'] . " </p>";
+                                echo "<p class=\"card-text py-1 textp\" style=\"margin-bottom:0.25%;\"> ปริมาณการซืื้อ Carbon Credit : " . $row['1'] . " RetailCC</p>";
+                                echo "<p class=\"card-text py-1 textp\" style=\"margin-bottom:0.25%;\">  ราคาทั้งหมด : " . $row['2'] . " บาท</p>";
                                 echo "</div>";
-                                echo "<div class=\"col\"></div>";
+                                echo "</div>";
+  
                                 
                                 echo "<br>";
                                 echo "<br>";
@@ -142,10 +147,10 @@ if (!isset($_SESSION["id"])) {
 
                                 echo "<div class=\"row align-items-center\">";
                                 echo "<div class=\"col\"></div>";
-                                echo "<div class=\"col\"></div>";
-                                echo "<div class=\"col\">";
-                                echo "<a href=\"create_cerfiticate.php\?idtran=".$row['0']."\"  class=\"btn-learn-more\" download>Download Certificate</a>";
+                                echo "<div class=\"col\" style=\"text-align:center\">";
+                                echo "<a href=\"create_cerfiticate.php\?idtran=".$row['0']."\"  class=\"btn-download-cer\" download >ดาวน์โหลดใบรับรอง</a>";
                                 echo "</div>";
+                                echo "<div class=\"col\"></div>";
                                 echo "</div>";
                                 
                                 echo "<br>";
@@ -154,11 +159,7 @@ if (!isset($_SESSION["id"])) {
                                 echo "<br>";
                                 echo "<br>";
 
-                                echo "<div class=\"row align-items-end\">";
-                                echo "<div class=\"col\"></div>";
-                                echo "<div class=\"col\"></div>";
-                                echo "<div class=\"col\"></div>";
-                                echo "</div>";
+ 
                         
                                 
                                 echo "</div>";

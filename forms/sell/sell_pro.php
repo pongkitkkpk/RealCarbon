@@ -42,7 +42,7 @@ $sqlstore2 = "UPDATE store SET havecc='$currenthavecc',time='$time' WHERE id_sto
 $conn->exec($sqlstore2);
 // 
 $conn = null;
-header("location:../homepage/home.php");
+header("location:../history/historypage.php");
 // header("location:addcc_pro.php");
 die();
 

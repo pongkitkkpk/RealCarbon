@@ -39,7 +39,13 @@ session_start();
                                     echo "<strong>อีเมลนี้มีการใช้งานแล้ว ";
                                     echo "<button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\" aria-label=\"Close\"> </button>";
                                     echo "</div>";
-                                } else {
+                                }else if($_SESSION['add_login'] == "error") {
+                                    echo "<div class=\"alert alert-danger alert-dismissible fade show\" role=\"alert\">";
+                                    echo "<strong>Email หรือ password ไม่ถูกต้อง ";
+                                    echo "<button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\" aria-label=\"Close\"> </button>";
+                                    echo "</div>";
+                                }
+                                else {
                                     
                                     echo "<div class=\"alert alert-success alert-dismissible fade show\" role=\"alert\">";
                                     echo "<strong>เปิดบัญชีเรียบร้อยแล้ว!!";
