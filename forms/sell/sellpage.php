@@ -43,10 +43,8 @@ if (!isset($_SESSION["id"])) {
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-xl-8">
-                    <h1>ขาย RetaillCC หน้านี้คร้าบบบ </h1>
-                    <h1>ตอนนี้คุณมี <?php echo $_SESSION["oldhavecc"] ?> Retailcc</h1>
-                    <h2>ตอนนี้มี Retaill Carbon Credit เหลือ <?php echo $_SESSION["ccbalance"]; ?> Retail CC แล้ว</h2>
-
+                    <h1>ตลาดสำหรับการซื้อคาร์บอนเครดิต</h1>
+                    <a href="#faq"><h2>เลื่อนลงด้านล่างเพื่อเริ่มการสั่งซื้อได้เลย <i class="bi bi-arrow-down-circle-fill"></i></h2></a>
                 </div>
             </div>
         </div>
@@ -61,7 +59,7 @@ if (!isset($_SESSION["id"])) {
                     <h3>ขณะนี้มี retailCC พร้อมจำหน่าย <?php echo $_SESSION["ccbalance"]; ?> retailCC</h3>
                 </div>
                 <div class="card-body">
-                    <h5 class="alert alert-light pt-3" >*** เรทราคาวันนี้ 1 reatailcc = 500 บาท ***</h5>
+                    <h5 class="alert pt-3" >*** เรทราคาวันนี้ 1 reatailCC = 500 บาท ***</h5>
                     <h1 class="card-title py-3"><u>บริษัท <b><?php echo $_SESSION["Name_Company"]; ?></b> มี retailCC อยู่ <?php echo $_SESSION["oldhavecc"]; ?> retailCC</u></h1>
                     <div class="row content">
                         <h5>จำนวน retailCC ที่ต้องการซื้อ</h5>
@@ -87,14 +85,14 @@ if (!isset($_SESSION["id"])) {
                                 <p style="display:inline">บาท</p>
                                 <br>
                                 <div class="py-3">
-                                    <button type="submit" class="btn-learn-more" data-formrun-error-text="การตกลงซื้อไม่สำเร็จ">ตกลงซื้อ</button>
+                                    <button type="submit" class="btn-sell" data-formrun-error-text="การตกลงซื้อไม่สำเร็จ">ตกลงซื้อ</button>
                                 </div>
                             </form>
                         </div>
                     </div>
                 </div>
                 <div class="card-footer text-muted">
-                    ราคาอัพเดทเมื่อ 2 วันก่อน
+                    ราคาอัพเดทครั้งล่าสุดเมื่อ 31-7-2566
                 </div>
             </div>
             
