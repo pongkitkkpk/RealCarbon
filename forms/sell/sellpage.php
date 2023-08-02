@@ -43,10 +43,10 @@ if (!isset($_SESSION["id"])) {
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-xl-8">
-                    <h1>ตลาดคาร์บอนเครดิต </h1>
-                    <h1>การซื้อคาร์บอนเครดิต</h1>
-                    <h2 style="font-size : 5vw"> Retaill Carbon Credit พร้อมจำหน่าย <?php echo $_SESSION["ccbalance"]; ?> Retail CC </h2>
-
+                    <h1>ตลาดสำหรับการซื้อคาร์บอนเครดิต</h1>
+                    <a href="#faq">
+                        <h2>เลื่อนลงด้านล่างเพื่อเริ่มการสั่งซื้อได้เลย <i class="bi bi-arrow-down-circle-fill"></i></h2>
+                    </a>
                 </div>
             </div>
         </div>
@@ -57,20 +57,21 @@ if (!isset($_SESSION["id"])) {
     <section id="faq" class="faq">
         <div class="container">
             <div class="card text-center">
-                <div class="card-header">
-                    <h3>ขณะนี้ carbonx มี retailCC พร้อมจำหน่าย <?php echo $_SESSION["ccbalance"]; ?> retailCC</h3>
+                <div class="card-header" id="sellhead">
+                    <h3 data-formrun-hide-if-confirm>ขณะนี้มี retailCC พร้อมจำหน่าย <?php echo $_SESSION["ccbalance"]; ?> retailCC</h3>
+                    <h3 data-formrun-show-if-confirm>ตรวจเช็คช้อมูล</h3>
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title pt-3" > <b>เรทราคาวันนี้ 1 reatailcc = 500 บาท</b> </h5>
-                    <p class="card-title py-2 pb-1">บริษัท <?php echo $_SESSION["Name_Company"]; ?> มี retailCC อยู่ <?php echo $_SESSION["oldhavecc"]; ?> retailCC</ย>
+                    <h5 class="alert pt-3" data-formrun-hide-if-confirm>*** เรทราคาวันนี้ 1 reatailCC = 500 บาท ***</h5>
+                    <h2 class="card-title py-3" data-formrun-hide-if-confirm><u>บริษัท <b><?php echo $_SESSION["Name_Company"]; ?></b> มี retailCC อยู่ <?php echo $_SESSION["oldhavecc"]; ?> retailCC</u></h2>
                     <div class="row content">
-                        <h2>จำนวน retailCC ที่ต้องการซื้อ</h2>
+                        <h5 data-formrun-hide-if-confirm>จำนวน retailCC ที่ต้องการซื้อ</h5>
                         <div class="card-block">
-                            <form class="formrun" action="sell_pro.php" method="get" data-formrun-alert-dialog>
+                            <form class="formrun" action="sell_pro.php" method="get" data-formrun-confirm data-formrun-alert-dialog>
                                 <div class="row py-3">
 
                                     <div class="col-sm"></div>
-                                    <div class="col-sm">
+                                    <div class="col-sm" data-formrun-hide-if-confirm>
                                         <div class="form-group" data-formrun-class-if-success="has-success" data-formrun-class-if-error="has-danger" data-formrun-target="cc">
                                             <input type="number" id="needcc" onkeyup="changeprice()" min="0" max="<?php echo $_SESSION["ccbalance"]; ?>" class="form-control" name="CC" placeholder="เหลือ <?php echo $_SESSION["ccbalance"]; ?> RetailCC" data-formrun-required data-formrun-class-if-success="form-control-success" data-formrun-class-if-error="form-control-danger" onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))">
                                             <div class="text-danger" data-formrun-show-if-error="CC">กรุณาใส่จำนวน retailCC ที่จะซื้อ</div>
@@ -81,23 +82,44 @@ if (!isset($_SESSION["id"])) {
                                     <div class="col-sm"></div>
 
                                 </div>
+
                                 <!-- <p> เรท 1 Retailcc = 500 บาท</p> -->
-                                <p style="display:inline">ราคาการสั่งซื้อ </p>
-                                <p style="display:inline"><span id="pricetotal"></p>
-                                <p style="display:inline">บาท</p>
-                                <br>
-                                <div class="py-3">
-                                    <button type="submit" class="btn-learn-more " data-formrun-error-text="ซื้อไม่ได้">ตกลงซื้อ</button>
+
+                                <div class="" data-formrun-show-if-confirm>
+                                    <br>
+
+                                    <h5>ชื่อบริษัท <b><?php echo $_SESSION["Name_Company"]; ?></b></h5>
+                                    <h5>จำนวน RetailCC ที่ต้องการซื้อ <b><span data-formrun-confirm-value="CC"> </span> </b>RetailCC</h5>
+                                    <h5>ราคาต่อหน่วย <b>500</b> บาท / 1 RetailCC</h5>
+                                </div>
+                                <div>
+                                    <h5 style="display:inline">ราคาการสั่งซื้อ </h5>
+                                    <h5 style="display:inline"><b><span id="pricetotal"></b></h5>
+                                    <h5 style="display:inline" data-formrun-hide-if-confirm>บาท</h5>
+                                    <br>
+
+                                </div>
+
+                                <div data-formrun-show-if-confirm>
+                                    <br>
+                                    <br>
+                                    <a href="javascript:void(0)" class="btn-cancel" data-formrun-back-button>ย้อนกลับ</a>
+                                    <button type="submit" class="btn-sell" data-formrun-error-text="การตกลงซื้อไม่สำเร็จ" data-formrun-send-text="บันทึก" data-formrun-submitting-text="กำลังบันทึก...">ตกลงซื้อ</button>
+                                    <br>
+                                    <br>
+                                </div>
+                                <div class="py-3" data-formrun-hide-if-confirm>
+                                    <button type="submit" class="btn-sell" data-formrun-error-text="การตกลงซื้อไม่สำเร็จ">ตกลงซื้อ</button>
                                 </div>
                             </form>
                         </div>
                     </div>
                 </div>
                 <div class="card-footer text-muted">
-                    ราคาอัพเดทเมื่อ 2 วันก่อน
+                    ราคาอัพเดทครั้งล่าสุดเมื่อ 31-7-2566
                 </div>
             </div>
-            
+
         </div>
     </section>
     <!-- End About Us Section -->

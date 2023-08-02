@@ -121,7 +121,7 @@ if (!isset($_SESSION["id"])) {
                                 
 
                                 echo "<div class=\"card-bodycard\" >";
-                                echo "<div class=\"container has-bg-img\"   style=\"background-image: url(../history/image/green_carbon.jpg);   background-size: 100% 100%; \"       >";
+                                echo "<div class=\"container has-bg-img\"   style=\"background-image: url(../history/image/bg.jpg);   background-size: 50% 100%; \"       >";
                                 
                                 
                                 echo "<div class=\"row align-items-start\" >";

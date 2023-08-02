@@ -470,6 +470,7 @@ h6 {
   margin-bottom: 40px;
   font-size: 24px;
 }
+
 /* ****************************** */
 #herosell{
   width: 100%;
@@ -508,6 +509,68 @@ h6 {
   margin-bottom: 40px;
   font-size: 24px;
 }
+
+#faq h3 {
+  color: white;
+}
+
+
+#faq #sellhead {
+  background-color: rgba(56, 61, 51, 0.9);
+}
+
+#faq .alert {
+  background-color: rgba(103, 133, 102, 0.3);
+}
+
+#faq b {
+  color: rgba(103, 133, 102, 1);
+}
+
+#faq .btn-sell {
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 32px;
+  border-radius: 50px;
+  transition: 0.3s;
+  line-height: 1;
+  color: #678566;
+  animation-delay: 0.8s;
+  margin-top: 6px;
+  border: 2px solid #678566;
+}
+
+#faq .btn-sell:hover {
+  background: #678566;
+  color: whitesmoke;
+  text-decoration: none;
+ 
+}
+
+#faq .btn-cancel {
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 32px;
+  border-radius: 50px;
+  transition: 0.3s;
+  line-height: 1;
+  color: #ac4f27;
+  animation-delay: 0.8s;
+  margin-top: 6px;
+  border: 2px solid #c44f0c;
+}
+
+#faq .btn-cancel:hover {
+  background: #de9b73;
+  color: whitesmoke;
+  text-decoration: none;
+ 
+}
+
 /* ************************************ */
 #hero {
   width: 100%;
@@ -1613,25 +1676,6 @@ background-color: #fff;
 th,td.center,div.center,h2.center{
   text-align: center;
 }
-.btn-learn-more {
-  font-weight: 600;
-  font-size: 14px;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding: 12px 32px;
-  border-radius: 50px;
-  transition: 0.3s;
-  line-height: 1;
-  color: #009961;
-  animation-delay: 0.8s;
-  margin-top: 6px;
-  border: 2px solid #009961;
-}
-.btn-learn-more:hover {
-  background: #009961;
-  color: #fff;
-  text-decoration: none;
- 
-}
+
 
 

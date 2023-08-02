@@ -34,25 +34,23 @@ session_start();
                         <div class="card-3d-wrap mx-auto">
                             <?php
                             if (isset($_SESSION['add_login'])) {
-                                if ($_SESSION['add_login'] == "error") {
-                                    echo "<div class=\"alert alert-danger alert-dismissible fade show\" role=\"alert\">";
-                                    echo "<strong>เกิดข้อผิดพลาด กรุณากรอกข้อมูลใหม่อีกครั้ง ";
-                                    echo "<button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\" aria-label=\"Close\"> </button>";
-                                    echo "</div>";
-                                }else if(isset($_SESSION['add_login']) == "haveemail") {
+                                if ($_SESSION['add_login'] == "haveemail") {
                                     echo "<div class=\"alert alert-danger alert-dismissible fade show\" role=\"alert\">";
                                     echo "<strong>อีเมลนี้มีการใช้งานแล้ว ";
                                     echo "<button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\" aria-label=\"Close\"> </button>";
                                     echo "</div>";
-                                }
-                                else {
-                                    echo "<div class='alert alert-success alert-dismissible fade show' role=\"alert\"> ";
+                                } else {
+                                    
+                                    echo "<div class=\"alert alert-success alert-dismissible fade show\" role=\"alert\">";
                                     echo "<strong>เปิดบัญชีเรียบร้อยแล้ว!!";
                                     echo "<button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\" aria-label=\"Close\"></button>";
                                     echo "</div>";
                                 }
-                                unset($_SESSION['add_login']);
                             }
+
+
+                            unset($_SESSION['add_login']);
+
                             ?>
                             <div class="card-3d-wrapper">
                                 <div class="card-front">

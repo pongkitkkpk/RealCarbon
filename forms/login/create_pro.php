@@ -27,7 +27,7 @@ $sql = "SELECT * FROM member WHERE Email = '$email'";
 //แสดงผลข้อมูลในตาราง
 $result = $connection->query($sql); 
 if ($result->rowCount() == 1) {
-    $_SESSION["add_login"] = "haveemail";
+    $_SESSION["add_login"] = 'haveemail';
 
 } else {
     //ปรับเป็น ไทม์โซน ไทย
@@ -37,7 +37,7 @@ if ($result->rowCount() == 1) {
             VALUES('$name_com','$email','$passwd','$phone','$time')";
     $connection->exec($sql);  //นำเข้าข้อมูลเข้าฐานข้อมูล
     
-    $_SESSION['add_login'] = 'success';
+    
 
     $emptycc=0;
     $sqlnext = "SELECT * FROM member WHERE Name_Company='$name_com' and Email='$email'";

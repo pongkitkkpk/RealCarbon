@@ -7,10 +7,9 @@ if (!isset($_SESSION["id"])) {
 ?>
 
 <?php
-$peronecc=500;
+$peronecc = 500;
 $cc = $_GET['CC'];
-$_SESSION["cc"]=$cc;
-$price = $cc*$peronecc;
+$price = $cc * $peronecc;
 $id_com = $_SESSION["ID_Company"];
 
 $oldcc = $_SESSION["ccbalance"];
@@ -19,7 +18,7 @@ $ccalluser = $_SESSION["ccalluser"];
 // สถานะเป็นแค่ซื้ออย่างเดียว
 $status = 1;
 
-$ccalluser = $ccalluser+$cc;
+$currentccalluser = $ccalluser + $cc;
 $currentcc = $oldcc - $cc;
 $currentmoney = $oldmoney + $price;
 
@@ -29,20 +28,16 @@ date_default_timezone_set('Asia/Bangkok');
 $time = date("Y-m-d H:i:s");
 // market cc database
 $sql = "INSERT INTO account (`ccspent`,`ccbalance`,`price`,`moneybalance`,`id_com`,`time`,`status`,`ccalluser`)
-                        VALUES('$cc','$currentcc','$price','$currentmoney','$id_com','$time',$status,$ccalluser)";
+                        VALUES('$cc','$currentcc','$price','$currentmoney','$id_com','$time',$status,$currentccalluser)";
 $conn->exec($sql);
 $_SESSION["ccbalance"] = $currentcc;
 $_SESSION["moneybalance"] = $currentmoney;
-$_SESSION["ccalluser"] = $ccall;
+$_SESSION["ccalluser"] = $currentccalluser;
 // 
 // user cc
-$sqlstore1 = "SELECT * FROM store ORDER BY id_store DESC LIMIT 1";
-$result_sqlstore1 = $conn->query($sqlstore1);
-$dataacc = $result_sqlstore1->fetch(PDO::FETCH_ASSOC);
-$_SESSION["oldhavecc"] = $dataacc["havecc"];
 
-$currenthavecc = $_SESSION["oldhavecc"]+$cc;
-$_SESSION["oldhavecc"] = $currenthavecc ;
+$currenthavecc = $_SESSION["oldhavecc"] + $cc;
+$_SESSION["oldhavecc"] = $currenthavecc;
 $sqlstore2 = "UPDATE store SET havecc='$currenthavecc',time='$time' WHERE id_store='$id_com'";
 $conn->exec($sqlstore2);
 // 
