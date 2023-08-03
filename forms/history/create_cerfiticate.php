@@ -5,8 +5,9 @@ if (!isset($_SESSION["id"])) {
     die();
 }
 $id_tran = $_GET['idtran'];
-
+// *************************************
 $conn = new PDO("mysql:host=localhost;dbname=dbbscarbon;charset=utf8", "root", "");
+// *************************************
 $sql = " SELECT * FROM account WHERE ID_Transection='$id_tran'";
 $result = $conn->query($sql);
 $row = $result->fetch(PDO::FETCH_ASSOC);
