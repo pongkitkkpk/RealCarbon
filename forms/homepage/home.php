@@ -61,16 +61,16 @@ session_start();
 
             <div class="row content">
                 <div class="col-lg-6">
-                    <p align ="justify">
-                        <strong>&nbsp;    คาร์บอนเครดิต</strong> คือ สิทธิที่เกิดจากการลดปริมาณการปล่อยก๊าซคาร์บอนไดออกไซด์หรือก๊าซเรือนกระจกสู่สิ่งแวดล้อม
+                    <p align="justify">
+                        <strong>&nbsp; คาร์บอนเครดิต</strong> คือ สิทธิที่เกิดจากการลดปริมาณการปล่อยก๊าซคาร์บอนไดออกไซด์หรือก๊าซเรือนกระจกสู่สิ่งแวดล้อม
                         โดยมาจากการที่บุคคลหรือองค์กรได้ดำเนินโครงการหรือมาตรการที่มีเป้าหมายเพื่อลดการปล่อยก๊าซคาร์บอนไดออกไซด์หรือก๊าซเรือนกระจกสู่สิ่งแวดล้อม
                         ซึ่งสามารถวัดปริมาณและสามารถนำไปซื้อขายในตลาดซื้อขายคาร์บอนเครดิตได้
                         การซื้อขายคาร์บอนเครดิตนั้นจะช่วยสร้างสมดุลในการปล่อยก๊าซเรือนกระจกไม่ให้ออกมาทำร้ายต่อโลกของเรามากจนเกินไปและยังเป็นการจุดประกายการมีส่วนร่วมของธุรกิจที่ปกติไม่ได้มีส่วนในการปล่อยก๊าซคาร์บอนส่วนเกินมาสู่โลกให้สามารถมีโอกาสทำประโยชน์ได้ ด้วยการนำเครดิตเหลือเหล่านั้นมาขึ้นทะเบียนขายให้กับธุรกิจอื่นที่ปล่อยก๊าซในระดับสูงเกินเกณฑ์และจำเป็นต้องหาเครดิตมาชดเชย
                     </p>
                 </div>
                 <div class="col-lg-6 pt-4 pt-lg-0">
-                    <p align ="justify">
-                    &nbsp;&nbsp;การซื้อขายคาร์บอนเครดิต ที่มีเป้าหมายเพื่อลดการปล่อยก๊าซเรือนกระจก โดยเปิดโอกาสให้คนที่ปล่อยก๊าซในระดับต่ำ ซึ่งทำให้คาร์บอนเครดิตเหลือใช้สามารถนำมาขายให้กับคนที่ปล่อยก๊าซไปแล้วในระดับสูงเพื่อชดเชยปริมาณคาร์บอนที่จะออกมาทำลายชั้นบรรยากาศในภาพรวม ซึ่งเมื่อธุรกิจที่ต้องใช้จ่ายเพิ่มเติมเพื่อซื้อคาร์บอนเครดิต จำเป็นต้องมีต้นทุนในการผลิตเพิ่ม หนทางที่ดีกว่า จึงเป็นการควบคุมปริมาณการปล่อยก๊าซของตัวเองให้ได้
+                    <p align="justify">
+                        &nbsp;&nbsp;การซื้อขายคาร์บอนเครดิต ที่มีเป้าหมายเพื่อลดการปล่อยก๊าซเรือนกระจก โดยเปิดโอกาสให้คนที่ปล่อยก๊าซในระดับต่ำ ซึ่งทำให้คาร์บอนเครดิตเหลือใช้สามารถนำมาขายให้กับคนที่ปล่อยก๊าซไปแล้วในระดับสูงเพื่อชดเชยปริมาณคาร์บอนที่จะออกมาทำลายชั้นบรรยากาศในภาพรวม ซึ่งเมื่อธุรกิจที่ต้องใช้จ่ายเพิ่มเติมเพื่อซื้อคาร์บอนเครดิต จำเป็นต้องมีต้นทุนในการผลิตเพิ่ม หนทางที่ดีกว่า จึงเป็นการควบคุมปริมาณการปล่อยก๊าซของตัวเองให้ได้
                     </p>
                     <a href="#" class="btn-learn-more">Learn More</a>
                 </div>
@@ -152,61 +152,22 @@ session_start();
     </section><!-- End Services Section -->
 
     <!-- ======= Contact Section ======= -->
-    <section id="contact2" class="contact2">
+    <section class="sponer">
         <div class="container">
-
             <div class="section-title">
                 <h2>คณะผู้จัดการประกวดและผู้สนับสนุนหลัก</h2>
                 <p>ขอขอบคุณคณะผู้จัดการประกวดและผู้สนับสนุนทุกท่านที่ร่วมกันสนับสนุนให้มีโครงการที่ดีเช่นนี้เกิดขึ้นนะครับ/ค่ะ</p>
                 <p>&nbsp;</p>
-                <div class="row" style="text-align: center; vertical-align:middle; padding: 35px;">
-                    <div class="col-xs-12 col-md-3" style="padding: 5px">
-                        <div class="element">
-                            <img style="position: relative;  top: 50%;  transform: translateY(-50%); width: 185px;
-                            height: 70px;" src="img/EXIMLogo.png" alt="Loading.."></img>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-md-3" style="padding: 5px">
-                        <div class="element">
-                            <img style="position: relative;  top: 50%;  transform: translateY(-50%);  width: 150px;
-                            height: 70px;" src="img/gideonOne.png" alt="Loading.."></img>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-md-3" style="padding: 5px">
-                        <div class="element">
-                            <img style="position: relative;  top: 50%;  transform: translateY(-50%);  width: 150px;
-                            height: 55px;" src="img/CentralRetail.png" alt="Loading.."></img>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-md-3" style="padding: 5px">
-                        <div class="element">
-                            <img style="position: relative;  top: 50%;  transform: translateY(-50%);  width: 240px;
-                            height: 70px;" src="img/EscoLogo.png" alt="Loading.."></img>
-                        </div>
-                    </div>
-                </div>
-                <div class="row" style="text-align: center;">
-                    <div class="col-xs-12 col-md-4" style="padding: 5px">
-                        <div class="element">
-                            <img style="position: relative;  top: 50%;  transform: translateY(-50%);  width: 220px;
-                            height: 100px;" src="img/NXPOLogo.png" alt="Loading.."></img>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-md-4" style="padding: 5px">
-                        <div class="element">
-                            <img style="position: relative;  top: 50%;  transform: translateY(-50%);  width: 200px;
-                            height: 70px;" src="img/ChulaNewLogo.png" alt="Loading.."></img>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-md-4" style="padding: 5px">
-                        <div class="element">
-                            <img style="position: relative;  top: 50%;  transform: translateY(-50%);  width: 230px;
-                            height: 80px;" src="img/FTICCINewLogo.jpg" alt="Loading.."></img>
-                        </div>
-                    </div>
+                <div id="grid">
+                    <div><img src="img/EXIMLogo.png" alt="Loading.."></img></div>
+                    <div><img src="img/gideonOne.png" alt="Loading.."></img></div>
+                    <div><img src="img/CentralRetail.png" alt="Loading.."></img> </div>
+                    <div><img src="img/EscoLogo.png" alt="Loading.."></img></div>
+                    <div><img src="img/NXPOLogo.png" alt="Loading.."></img></div>
+                    <div><img src="img/ChulaNewLogo.png" alt="Loading.."></img> </div>
+                    <div><img src="img/FTICCINewLogo.jpg" alt="Loading.."></img></div>
                 </div>
                 <p>&nbsp;</p>
-
             </div>
 
         </div>
