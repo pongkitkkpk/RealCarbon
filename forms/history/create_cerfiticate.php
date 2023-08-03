@@ -6,7 +6,11 @@ if (!isset($_SESSION["id"])) {
 }
 $id_tran = $_GET['idtran'];
 // *************************************
-$conn = new PDO("mysql:host=localhost;dbname=dbbscarbon;charset=utf8", "root", "");
+$servername = "localhost";
+$database = "dbbscarbon";
+$username = "root";
+$passworddb = "";
+$conn = new PDO("mysql:host=$servername;dbname=$database;charset=utf8", $username, $passworddb);
 // *************************************
 $sql = " SELECT * FROM account WHERE ID_Transection='$id_tran'";
 $result = $conn->query($sql);

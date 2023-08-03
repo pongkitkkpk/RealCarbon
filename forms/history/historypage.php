@@ -17,7 +17,7 @@ if (!isset($_SESSION["id"])) {
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon">
+    <link href="../carbonicon.jpg" rel="icon">
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
@@ -31,7 +31,7 @@ if (!isset($_SESSION["id"])) {
     <link href="../../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
     <link href="../../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
     <link href="../../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    
+
     <link rel="preload" as="image" href="../../forms/homepage/img/green-bg6.jpg">
     <link rel="preload" as="image" href="../history/image/forest_bg.jpg">
 
@@ -61,7 +61,7 @@ if (!isset($_SESSION["id"])) {
     </section><!-- End Hero -->
 
 
-    
+
     <div class="container fluid content">
 
         <br>
@@ -84,7 +84,11 @@ if (!isset($_SESSION["id"])) {
                         <?php
                         $id_com = $_SESSION["ID_Company"];
                         // *************************************
-                        $conn = new PDO("mysql:host=localhost;dbname=dbbscarbon;charset=utf8", "root", "");
+                        $servername = "localhost";
+                        $database = "dbbscarbon";
+                        $username = "root";
+                        $passworddb = "";
+                        $conn = new PDO("mysql:host=$servername;dbname=$database;charset=utf8", $username, $passworddb);
                         // *************************************
                         $conn->exec("SET CHARACTER SET utf8");
                         $data = $conn->query("SELECT a.ID_transection , a.ccspent , a.price , a.id_com , a.time ,a.status,
@@ -92,7 +96,7 @@ if (!isset($_SESSION["id"])) {
                               FROM account a , member m 
                               WHERE a.id_com=$id_com and m.ID_Company=a.id_com
                               ORDER BY a.ID_transection ;");
-                              
+
                         if ($data !== false) {
                             while ($row = $data->fetch()) {
                                 echo "<tr data-bs-toggle=\"collapse\" data-bs-target=\"#r" . $row['0'] . "\"><th>";
@@ -125,16 +129,16 @@ if (!isset($_SESSION["id"])) {
                                     echo "<div class=\"card-header center\" style=\"color: #cfa00c;\">";
                                 }
                                 echo "เลขการจัดซื้อที่ " . $row['0'] . "";
-                                echo "</div>";  
-                                
+                                echo "</div>";
+
 
                                 echo "<div class=\"card-bodycard\" >";
                                 echo "<div class=\"container has-bg-img \"   style=\"background-image: url(../history/image/forest_bg.jpg);   background-size: 100% 100% ; \"       >";
-                                
-                                
+
+
                                 echo "<div class=\"row align-items-start\" >";
-                                
- 
+
+
                                 echo "<div class=\"col\">";
                                 echo "<div class=\"card mt-5 mb-3 px-5 pb-4\" id=\"cardinside\" >";
                                 echo "<p class=\"card-text py-1 pt-5 textp\" style=\"margin-bottom:0.25%;\"> ชื่อบริษัท : " . $row['7'] . " </p>";
@@ -142,8 +146,8 @@ if (!isset($_SESSION["id"])) {
                                 echo "<p class=\"card-text py-1 textp\" style=\"margin-bottom:0.25%;\">  ราคาทั้งหมด : " . $row['2'] . " บาท</p>";
                                 echo "</div>";
                                 echo "</div>";
-  
-                                
+
+
                                 echo "<br>";
                                 echo "<br>";
                                 echo "<br>";
@@ -153,20 +157,20 @@ if (!isset($_SESSION["id"])) {
                                 echo "<div class=\"row align-items-center\">";
                                 echo "<div class=\"col\"></div>";
                                 echo "<div class=\"col\" style=\"text-align:center\">";
-                                echo "<a href=\"create_cerfiticate.php\?idtran=".$row['0']."\"  class=\"btn-download-cer\" download >ดาวน์โหลดใบรับรอง</a>";
+                                echo "<a href=\"create_cerfiticate.php\?idtran=" . $row['0'] . "\"  class=\"btn-download-cer\" download >ดาวน์โหลดใบรับรอง</a>";
                                 echo "</div>";
                                 echo "<div class=\"col\"></div>";
                                 echo "</div>";
-                                
+
                                 echo "<br>";
                                 echo "<br>";
                                 echo "<br>";
                                 echo "<br>";
                                 echo "<br>";
 
- 
-                        
-                                
+
+
+
                                 echo "</div>";
                                 echo "</div>";
                                 echo "</div>";

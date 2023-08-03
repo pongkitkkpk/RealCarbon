@@ -22,7 +22,11 @@ $currentccalluser = $ccalluser + $cc;
 $currentcc = $oldcc - $cc;
 $currentmoney = $oldmoney + $price;
 // ********************************* //
-$conn = new PDO("mysql:host=localhost;dbname=dbbscarbon;charset=utf8", "root", "");
+$servername = "localhost";
+$database = "dbbscarbon";
+$username = "root";
+$passworddb = "";
+$conn = new PDO("mysql:host=$servername;dbname=$database;charset=utf8", $username, $passworddb);
 // ********************************* //
 //ปรับเป็น ไทม์โซน ไทย
 date_default_timezone_set('Asia/Bangkok');

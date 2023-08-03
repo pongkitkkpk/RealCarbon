@@ -6,7 +6,7 @@ session_start();
 
 <head>
     <title>carbonX</title>
-    <link rel="icon" type="image/x-icon" href="../carbonicon.png">
+    <link href="../carbonicon.jpg" rel="icon">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css">

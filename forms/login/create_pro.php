@@ -13,9 +13,15 @@ if (isset($_SESSION["add_login"])) {
 
 
 
+
+
 // Connection
 // *************************************
-$connection = new PDO("mysql:host=localhost;dbname=dbbscarbon;charset=utf8", "root", "");
+$servername = "localhost";
+$database = "dbbscarbon";
+$username = "root";
+$passworddb = "";
+$connection = new PDO("mysql:host=$servername;dbname=$database;charset=utf8", $username, $passworddb);
 // *************************************
 
 // เข้ารหัส sha1
@@ -27,10 +33,9 @@ if (!$connection) {
 //เก็บเข้าไปในอีเมลที่ตรงกัน
 $sql = "SELECT * FROM member WHERE Email = '$email'";
 //แสดงผลข้อมูลในตาราง
-$result = $connection->query($sql); 
+$result = $connection->query($sql);
 if ($result->rowCount() == 1) {
     $_SESSION["add_login"] = 'haveemail';
-
 } else {
     //ปรับเป็น ไทม์โซน ไทย
     date_default_timezone_set('Asia/Bangkok');
@@ -39,11 +44,11 @@ if ($result->rowCount() == 1) {
             VALUES('$name_com','$email','$passwd','$phone','$time')";
     $connection->exec($sql);  //นำเข้าข้อมูลเข้าฐานข้อมูล
 
-    $emptycc=0;
+    $emptycc = 0;
     $sqlnext = "SELECT * FROM member WHERE Name_Company='$name_com' and Email='$email'";
     $resultnext = $connection->query($sqlnext);
     if ($resultnext->rowCount() == 1) {
-        $data=$resultnext->fetch(PDO::FETCH_ASSOC);
+        $data = $resultnext->fetch(PDO::FETCH_ASSOC);
         $id_com = $data["ID_Company"];
     }
     $sqlstore = "INSERT INTO store(id_store,havecc,time) 

@@ -9,7 +9,11 @@ if (isset($_SESSION["id"])) {
 $email = $_POST['email'];
 $p = $_POST['pswd'];
 // *************************************
-$conn = new PDO("mysql:host=localhost;dbname=dbbscarbon;charset=utf8", "root", "");
+$servername = "localhost";
+$database = "dbbscarbon";
+$username = "root";
+$passworddb = "";
+$conn = new PDO("mysql:host=$servername;dbname=$database;charset=utf8", $username, $passworddb);
 // *************************************
 $sql = " SELECT * FROM member WHERE Email='$email' and password = sha1('$p') ";
 $result = $conn->query($sql);
@@ -20,6 +24,9 @@ if ($result->rowCount() == 1) {
     $transec = "INSERT INTO transectionlogin (Email,time) VALUES ('$email','$time')";
     $conn->exec($transec);
     $data = $result->fetch(PDO::FETCH_ASSOC);
+
+    $idstore = $data["ID_Company"];
+
     $_SESSION["ID_Company"] = $data["ID_Company"];
     $_SESSION["Name_Company"] = $data["Name_Company"];
     $_SESSION["Email"] = $data["Email"];
@@ -36,10 +43,12 @@ if ($result->rowCount() == 1) {
     $_SESSION["ccbalance"] = $dataacc["ccbalance"];
     $_SESSION["ccalluser"] = $dataacc["ccalluser"];
     // import old cc user
-    $sqlstore = "SELECT * FROM store ORDER BY id_store DESC LIMIT 1";
+    $sqlstore = "SELECT * FROM store WHERE id_store=$idstore ";
     $result_sqlstore = $conn->query($sqlstore);
-    $dataacc = $result_sqlstore->fetch(PDO::FETCH_ASSOC);
-    $_SESSION["oldhavecc"] = $dataacc["havecc"];
+    if ($result_sqlstore->rowCount() == 1) {
+        $dataacck = $result_sqlstore->fetch(PDO::FETCH_ASSOC);
+        $_SESSION["oldhavecc"] = $dataacck["havecc"];
+    }
 
     header("Location:../homepage/home.php");
     die();

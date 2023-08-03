@@ -13,12 +13,11 @@ if (!isset($_SESSION["id"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>carbonX</title>
-    <link rel="icon" type="image/x-icon" href="../carbonicon.png">
     <meta content="" name="description">
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="../../assets/img/favicon.png" rel="icon">
+    <link href="../carbonicon.jpg" rel="icon">
     <link href="../../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <link rel="preload" as="image" href="../../forms/homepage/img/green-bg7.jpg">
