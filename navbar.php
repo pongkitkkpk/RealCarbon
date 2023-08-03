@@ -9,7 +9,14 @@
                     <nav id="navbar" class="navbar order-last order-lg-0">
                         <ul>
                             <li><a class="nav-link scrollto active" href="#hero">หน้าหลัก</a></li>
+<<<<<<< HEAD
                             <li><a class="nav-link scrollto" href="#about">เกี่ยวกับเรา</a></li>
+=======
+                            <li><a class="nav-link scrollto active" href="#about">เกี่ยวกับเรา</a></li>
+                            <!-- <li><a class="nav-link scrollto" href="#services">บริการของเรา</a></li> -->
+                            <!-- <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
+                            <li><a class="nav-link scrollto" href="#pricing">Pricing</a></li> -->
+>>>>>>> dd65fce64d0ce365979ef33011845dce9d76627f
                             <li class="dropdown"><a href="#services"><span>บริการของเรา</span> <i class="bi bi-chevron-down"></i></a>
                                 <ul>
                                     <li class="dropdown"><a href="#services"><span>ตลาดคาร์บอนเครดิต</span> <i class="bi bi-chevron-right"></i></a>
@@ -68,7 +75,14 @@
                     <nav id="navbar" class="navbar order-last order-lg-0">
                         <ul>
                             <li><a class="nav-link scrollto active" href="../homepage/home.php">หน้าหลัก</a></li>
+<<<<<<< HEAD
                             <li><a class="nav-link scrollto" href="../homepage/home.php#about">เกี่ยวกับเรา</a></li>
+=======
+                            <li><a class="nav-link scrollto active" href="../homepage/home.php#about">เกี่ยวกับเรา</a></li>
+                            <!-- <li><a class="nav-link scrollto" href="#services">บริการของเรา</a></li> -->
+                            <!-- <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
+                            <li><a class="nav-link scrollto" href="#pricing">Pricing</a></li> -->
+>>>>>>> dd65fce64d0ce365979ef33011845dce9d76627f
                             <li class="dropdown"><a href="../homepage/home.php#services"><span>บริการของเรา</span> <i class="bi bi-chevron-down"></i></a>
                                 <ul>
                                     <li class="dropdown"><a href="#"><span>ตลาดคาร์บอนเครดิต</span> <i class="bi bi-chevron-right"></i></a>
@@ -82,7 +96,11 @@
                                     <li><a href="#">ข้อมูลส่วนตัวของบริษัท</a></li>
                                 </ul>
                             </li>
+<<<<<<< HEAD
                             <li><a class="nav-link scrollto" href="../homepage/home.php#sponer">คณะผู้จัดการประกวดและผู้สนับสนุนหลัก</a></li>
+=======
+                            <li><a class="nav-link scrollto active" href="../homepage/home.php#contact2">คณะผู้จัดการประกวดและผู้สนับสนุนหลัก</a></li>
+>>>>>>> dd65fce64d0ce365979ef33011845dce9d76627f
                             <li><a class="nav-link scrollto" href="../login/logout_pro.php">ออกจากระบบ</a></li>
                         </ul>
                         <i class="bi bi-list mobile-nav-toggle"></i>

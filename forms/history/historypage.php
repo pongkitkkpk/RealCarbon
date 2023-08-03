@@ -50,8 +50,10 @@ if (!isset($_SESSION["id"])) {
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-xl-8">
-                    <h1>ประวัติการซื้อของบริษัท</h1>
-                    <h2>คุณมี <?php echo $_SESSION["oldhavecc"] ?> Retailcc</h2>
+                    <h1>ประวัติการสั่งซื้อทั้งหมดของบริษัท</h1>
+                    <a href="#about">
+                        <h2>เลื่อนลงด้านล่างเพื่อตรวจเช็คประวัติการสั่งซื้อและดาวน์โหลดใบรับรองได้เลย <i class="bi bi-arrow-down-circle-fill"></i></h2>
+                    </a>
                 </div>
             </div>
         </div>
