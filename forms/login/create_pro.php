@@ -14,7 +14,9 @@ if (isset($_SESSION["add_login"])) {
 
 
 // Connection
+// *************************************
 $connection = new PDO("mysql:host=localhost;dbname=dbbscarbon;charset=utf8", "root", "");
+// *************************************
 
 // เข้ารหัส sha1
 $passwd = sha1($passw);
@@ -36,8 +38,6 @@ if ($result->rowCount() == 1) {
     $sql = "INSERT INTO `member`(`Name_Company`, `Email`, `password`, `Phone`, `time`) 
             VALUES('$name_com','$email','$passwd','$phone','$time')";
     $connection->exec($sql);  //นำเข้าข้อมูลเข้าฐานข้อมูล
-    
-    
 
     $emptycc=0;
     $sqlnext = "SELECT * FROM member WHERE Name_Company='$name_com' and Email='$email'";
@@ -46,7 +46,6 @@ if ($result->rowCount() == 1) {
         $data=$resultnext->fetch(PDO::FETCH_ASSOC);
         $id_com = $data["ID_Company"];
     }
-
     $sqlstore = "INSERT INTO store(id_store,havecc,time) 
                  VALUES('$id_com','$emptycc','$time')";
     $connection->exec($sqlstore);

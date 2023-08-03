@@ -152,7 +152,7 @@ session_start();
     </section><!-- End Services Section -->
 
     <!-- ======= Contact Section ======= -->
-    <section class="sponer">
+    <section id="sponer" class="sponer">
         <div class="container">
             <div class="section-title">
                 <h2>คณะผู้จัดการประกวดและผู้สนับสนุนหลัก</h2>

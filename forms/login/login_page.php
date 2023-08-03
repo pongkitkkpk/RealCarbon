@@ -19,7 +19,6 @@ session_start();
     <!-- Vendor CSS Files -->
 
     <link href="../../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-
 </head>
 
 <body class="bg">
@@ -39,24 +38,19 @@ session_start();
                                     echo "<strong>อีเมลนี้มีการใช้งานแล้ว ";
                                     echo "<button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\" aria-label=\"Close\"> </button>";
                                     echo "</div>";
-                                }else if($_SESSION['add_login'] == "error") {
+                                } else if ($_SESSION['add_login'] == "error") {
                                     echo "<div class=\"alert alert-danger alert-dismissible fade show\" role=\"alert\">";
                                     echo "<strong>Email หรือ password ไม่ถูกต้อง ";
                                     echo "<button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\" aria-label=\"Close\"> </button>";
                                     echo "</div>";
-                                }
-                                else {
-                                    
+                                } else {
                                     echo "<div class=\"alert alert-success alert-dismissible fade show\" role=\"alert\">";
                                     echo "<strong>เปิดบัญชีเรียบร้อยแล้ว!!";
                                     echo "<button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\" aria-label=\"Close\"></button>";
                                     echo "</div>";
                                 }
                             }
-
-
                             unset($_SESSION['add_login']);
-
                             ?>
                             <div class="card-3d-wrapper">
                                 <div class="card-front">
@@ -106,15 +100,11 @@ session_start();
                                 </div>
                             </div>
                         </div>
-
                     </div>
                     <h1 class="mb-0 mt-4 text-center"><a href="../homepage/home.php" class="bach-to-home"><i class="bi bi-arrow-left-short"></i></a></h1>
                 </div>
-
             </div>
-
         </div>
-
     </div>
 
 
@@ -131,8 +121,3 @@ session_start();
 </body>
 
 </html>
-
-<!-- <?php
-        // session_destroy();
-        // die();
-        ?> -->

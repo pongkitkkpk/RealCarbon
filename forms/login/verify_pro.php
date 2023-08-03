@@ -8,12 +8,11 @@ if (isset($_SESSION["id"])) {
 <?php
 $email = $_POST['email'];
 $p = $_POST['pswd'];
+// *************************************
 $conn = new PDO("mysql:host=localhost;dbname=dbbscarbon;charset=utf8", "root", "");
+// *************************************
 $sql = " SELECT * FROM member WHERE Email='$email' and password = sha1('$p') ";
 $result = $conn->query($sql);
-
-
-
 
 if ($result->rowCount() == 1) {
     date_default_timezone_set('Asia/Bangkok');
@@ -36,13 +35,12 @@ if ($result->rowCount() == 1) {
     $_SESSION["moneybalance"] = $dataacc["moneybalance"];
     $_SESSION["ccbalance"] = $dataacc["ccbalance"];
     $_SESSION["ccalluser"] = $dataacc["ccalluser"];
-    // 
     // import old cc user
     $sqlstore = "SELECT * FROM store ORDER BY id_store DESC LIMIT 1";
     $result_sqlstore = $conn->query($sqlstore);
     $dataacc = $result_sqlstore->fetch(PDO::FETCH_ASSOC);
     $_SESSION["oldhavecc"] = $dataacc["havecc"];
-    // 
+
     header("Location:../homepage/home.php");
     die();
 } else {
