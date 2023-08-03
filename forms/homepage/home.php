@@ -84,9 +84,6 @@ session_start();
         <div class="container">
             <div class="section-title">
                 <h2>บริการของเรา</h2>
-                <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint -->
-                <!-- consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit -->
-                <!-- in iste officiis commodi quidem hic quas.</p> -->
             </div>
 
             <div class="row">
@@ -153,7 +150,7 @@ session_start();
     </section><!-- End Services Section -->
 
     <!-- ======= Contact Section ======= -->
-    <section class="sponer">
+    <section id="sponer" class="sponer">
         <div class="container">
             <div class="section-title">
                 <h2>คณะผู้จัดการประกวดและผู้สนับสนุนหลัก</h2>

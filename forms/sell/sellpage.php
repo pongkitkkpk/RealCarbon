@@ -35,7 +35,6 @@ if (!isset($_SESSION["id"])) {
 
     <!-- Template Main CSS File -->
     <link href="../../assets/css/style.css" rel="stylesheet">
-
 </head>
 
 <body>
@@ -71,7 +70,6 @@ if (!isset($_SESSION["id"])) {
                         <div class="card-block">
                             <form class="formrun" action="sell_pro.php" method="get" data-formrun-confirm data-formrun-alert-dialog>
                                 <div class="row py-3">
-
                                     <div class="col-sm"></div>
                                     <div class="col-sm" data-formrun-hide-if-confirm>
                                         <div class="form-group" data-formrun-class-if-success="has-success" data-formrun-class-if-error="has-danger" data-formrun-target="cc">
@@ -82,14 +80,9 @@ if (!isset($_SESSION["id"])) {
                                         </div>
                                     </div>
                                     <div class="col-sm"></div>
-
                                 </div>
-
-                                <!-- <p> เรท 1 Retailcc = 500 บาท</p> -->
-
                                 <div class="" data-formrun-show-if-confirm>
                                     <br>
-
                                     <h5>ชื่อบริษัท <b><?php echo $_SESSION["Name_Company"]; ?></b></h5>
                                     <h5>จำนวน RetailCC ที่ต้องการซื้อ <b><span data-formrun-confirm-value="CC"> </span> </b>RetailCC</h5>
                                     <h5>ราคาต่อหน่วย <b>500</b> บาท / 1 RetailCC</h5>
@@ -99,9 +92,7 @@ if (!isset($_SESSION["id"])) {
                                     <h5 style="display:inline"><b><span id="pricetotal"></b></h5>
                                     <h5 style="display:inline" data-formrun-hide-if-confirm>บาท</h5>
                                     <br>
-
                                 </div>
-
                                 <div data-formrun-show-if-confirm>
                                     <br>
                                     <br>

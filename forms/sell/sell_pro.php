@@ -21,8 +21,9 @@ $status = 1;
 $currentccalluser = $ccalluser + $cc;
 $currentcc = $oldcc - $cc;
 $currentmoney = $oldmoney + $price;
-
+// ********************************* //
 $conn = new PDO("mysql:host=localhost;dbname=dbbscarbon;charset=utf8", "root", "");
+// ********************************* //
 //ปรับเป็น ไทม์โซน ไทย
 date_default_timezone_set('Asia/Bangkok');
 $time = date("Y-m-d H:i:s");
@@ -33,17 +34,16 @@ $conn->exec($sql);
 $_SESSION["ccbalance"] = $currentcc;
 $_SESSION["moneybalance"] = $currentmoney;
 $_SESSION["ccalluser"] = $currentccalluser;
-// 
+
 // user cc
 
 $currenthavecc = $_SESSION["oldhavecc"] + $cc;
 $_SESSION["oldhavecc"] = $currenthavecc;
 $sqlstore2 = "UPDATE store SET havecc='$currenthavecc',time='$time' WHERE id_store='$id_com'";
 $conn->exec($sqlstore2);
-// 
+
 $conn = null;
 header("location:../history/historypage.php");
-// header("location:addcc_pro.php");
 die();
 
 ?>

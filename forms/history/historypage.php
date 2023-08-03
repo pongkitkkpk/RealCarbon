@@ -80,7 +80,9 @@ if (!isset($_SESSION["id"])) {
 
                         <?php
                         $id_com = $_SESSION["ID_Company"];
+                        // *************************************
                         $conn = new PDO("mysql:host=localhost;dbname=dbbscarbon;charset=utf8", "root", "");
+                        // *************************************
                         $conn->exec("SET CHARACTER SET utf8");
                         $data = $conn->query("SELECT a.ID_transection , a.ccspent , a.price , a.id_com , a.time ,a.status,
                                          m.ID_Company,m.Name_Company
@@ -165,11 +167,6 @@ if (!isset($_SESSION["id"])) {
                                 echo "</div>";
                                 echo "</div>";
                                 echo "</div>";
-
-
-
-
-                                // echo "<p class=\"card-text\" style=\"margin-bottom:0.25%;\">  <br></p>";
 
 
                                 echo "</td></tr>";
