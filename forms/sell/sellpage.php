@@ -12,7 +12,8 @@ if (!isset($_SESSION["id"])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>homepage</title>
+    <title>carbonX</title>
+    <link rel="icon" type="image/x-icon" href="../carbonicon.png">
     <meta content="" name="description">
     <meta content="" name="keywords">
 

@@ -5,7 +5,8 @@ session_start();
 <html lang="en">
 
 <head>
-    <title>Webleb</title>
+    <title>carbonX</title>
+    <link rel="icon" type="image/x-icon" href="../carbonicon.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css">

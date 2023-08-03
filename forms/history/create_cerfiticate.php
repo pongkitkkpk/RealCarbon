@@ -26,6 +26,8 @@ $namecom = $row2['Name_Company'];
 <html>
 
 <head>
+    <title>carbonX</title>
+    <link rel="icon" type="image/x-icon" href="../carbonicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Pridi:wght@300&display=swap" rel="stylesheet">
     <style type='text/css'>
         body,
@@ -114,9 +116,9 @@ $namecom = $row2['Name_Company'];
             เลขการจัดซื้อที่ <?php echo $id_tran; ?>
             <br>
             <div id="detail_cer">
-            ได้ทำการสั่งซื้อ RetailCC รวมทั้งสิ้น <?php echo $ccspent; ?> RetailCC</div>
+                ได้ทำการสั่งซื้อ RetailCC รวมทั้งสิ้น <?php echo $ccspent; ?> RetailCC</div>
             <div id="detail_date">
-            ในวันที่ <?php echo $time; ?></div>
+                ในวันที่ <?php echo $time; ?></div>
         </div>
         <div class="reason">
             <b>ออกใบรับรองโดย</b>
@@ -127,4 +129,3 @@ $namecom = $row2['Name_Company'];
 </body>
 
 </html>
-
