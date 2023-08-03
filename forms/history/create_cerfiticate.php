@@ -47,7 +47,8 @@ $namecom = $row2['Name_Company'];
         }
 
         .container {
-            border: 20px solid tan;
+            border: 20px solid #678566;
+            background-color: rgba(233, 233, 182, 0.3);
             width: 750px;
             height: 563px;
             display: table-cell;
@@ -59,7 +60,7 @@ $namecom = $row2['Name_Company'];
         }
 
         .marquee {
-            color: tan;
+            color: #678566;
             font-size: 48px;
             margin: 20px;
         }
@@ -70,7 +71,7 @@ $namecom = $row2['Name_Company'];
 
         .person {
             border-bottom: 2px solid black;
-            font-size: 32px;
+            font-size: 30px;
             font-style: italic;
             margin: 20px auto;
             width: 400px;
@@ -82,6 +83,13 @@ $namecom = $row2['Name_Company'];
 
         #detail_cer {
             font-size: 20px;
+            margin-bottom: 5px;
+            margin-top: 5px;
+        }
+
+        #detail_date {
+            font-size: 20px;
+            margin-bottom: 30px;
         }
     </style>
 </head>
@@ -107,8 +115,8 @@ $namecom = $row2['Name_Company'];
             <br>
             <div id="detail_cer">
             ได้ทำการสั่งซื้อ RetailCC รวมทั้งสิ้น <?php echo $ccspent; ?> RetailCC</div>
-            <br>
-            ในวันที่ <?php echo $time; ?>
+            <div id="detail_date">
+            ในวันที่ <?php echo $time; ?></div>
         </div>
         <div class="reason">
             <b>ออกใบรับรองโดย</b>
