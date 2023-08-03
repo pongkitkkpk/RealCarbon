@@ -25,11 +25,16 @@ $namecom = $row2['Name_Company'];
 <html>
 
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Pridi:wght@300&display=swap" rel="stylesheet">
     <style type='text/css'>
         body,
         html {
             margin: 0;
             padding: 0;
+        }
+
+        * {
+            font-family: 'Pridi', serif;
         }
 
         body {
@@ -73,38 +78,41 @@ $namecom = $row2['Name_Company'];
         .reason {
             margin: 20px;
         }
+
+        #detail_cer {
+            font-size: 20px;
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <div class="logo">
-            An Organization
-        </div>
+        <!-- <div class="logo">
+            CARBONX
+        </div> -->
 
         <div class="marquee">
-            Certificate of Completion
+            CARBONX
         </div>
 
         <div class="assignment">
-            This certificate is presented to
+            ขอมอบใบรับรองการซื้อขายนี้เพื่อแสดงว่า
         </div>
 
         <div class="person">
-            <?php echo $id_tran; ?>
-            ชื่อ
-            <?php echo $namecom; ?>
-            ซื้อจำนวน
-            <?php echo $ccspent; ?>
-            ราคา
-            <?php echo $price; ?>
-            เวลา
-
-            <?php echo $time; ?>
+            บริษัท <?php echo $namecom; ?>
+            <br>
+            เลขการจัดซื้อที่ <?php echo $id_tran; ?>
+            <br>
+            <div id="detail_cer">
+            ได้ทำการสั่งซื้อ RetailCC รวมทั้งสิ้น <?php echo $ccspent; ?> RetailCC</div>
+            <br>
+            ในวันที่ <?php echo $time; ?>
         </div>
         <div class="reason">
-            For deftly defying the laws of gravity<br />
-            and flying high
+            <b>ออกใบรับรองโดย</b>
+            <br>
+            CARBONX
         </div>
     </div>
 </body>
