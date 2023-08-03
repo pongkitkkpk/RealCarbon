@@ -12,7 +12,7 @@
                     <nav id="navbar" class="navbar order-last order-lg-0">
                         <ul>
                             <li><a class="nav-link scrollto active" href="#hero">หน้าหลัก</a></li>
-                            <li><a class="nav-link scrollto" href="#about">เกี่ยวกับเรา</a></li>
+                            <li><a class="nav-link scrollto active" href="#about">เกี่ยวกับเรา</a></li>
                             <!-- <li><a class="nav-link scrollto" href="#services">บริการของเรา</a></li> -->
                             <!-- <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
                             <li><a class="nav-link scrollto" href="#pricing">Pricing</a></li> -->
@@ -86,7 +86,7 @@
                     <nav id="navbar" class="navbar order-last order-lg-0">
                         <ul>
                             <li><a class="nav-link scrollto active" href="../homepage/home.php">หน้าหลัก</a></li>
-                            <li><a class="nav-link scrollto" href="../homepage/home.php#about">เกี่ยวกับเรา</a></li>
+                            <li><a class="nav-link scrollto active" href="../homepage/home.php#about">เกี่ยวกับเรา</a></li>
                             <!-- <li><a class="nav-link scrollto" href="#services">บริการของเรา</a></li> -->
                             <!-- <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
                             <li><a class="nav-link scrollto" href="#pricing">Pricing</a></li> -->
@@ -103,7 +103,7 @@
                                     <li><a href="#">ข้อมูลส่วนตัวของบริษัท</a></li>
                                 </ul>
                             </li>
-                            <li><a class="nav-link scrollto" href="../homepage/home.php#contact2">คณะผู้จัดการประกวดและผู้สนับสนุนหลัก</a></li>
+                            <li><a class="nav-link scrollto active" href="../homepage/home.php#contact2">คณะผู้จัดการประกวดและผู้สนับสนุนหลัก</a></li>
                             <li><a class="nav-link scrollto" href="../login/logout_pro.php">ออกจากระบบ</a></li>
                         </ul>
                         <i class="bi bi-list mobile-nav-toggle"></i>

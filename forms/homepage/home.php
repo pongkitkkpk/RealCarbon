@@ -84,9 +84,6 @@ session_start();
         <div class="container">
             <div class="section-title">
                 <h2>บริการของเรา</h2>
-                <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint -->
-                <!-- consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit -->
-                <!-- in iste officiis commodi quidem hic quas.</p> -->
             </div>
 
             <div class="row">
@@ -144,6 +141,8 @@ session_start();
                         <div class="icon"><i class="bi bi-buildings"></i></div>
                         <h4><a id="green" href="">ข้อมูลส่วนตัวของบริษัท</a></h4>
                         <p>พื้นที่สำหรับข้อมูลส่วนตัวของบริษัทของท่าน โดยท่านสามารถทำการเรียกดู แก้ไข เพิ่มรายละเอียดได้ง่ายๆเพียงกดตรงนี้</p>
+                        <br>
+                        <p id="unavailable">------ ยังไม่พร้อมให้บริการ ------</p>
                     </div>
                 </div>
 
